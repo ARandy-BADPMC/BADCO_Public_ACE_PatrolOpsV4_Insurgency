@@ -1,0 +1,67 @@
+// Multiplayer Scripted Framework
+#include "mpsf\configuration.hpp"
+// Mission Configuration
+#include "configuration.hpp"
+
+// BIS Configuration
+allowFunctionsLog = 1; // Debug TODO: REMOVE FOR MP
+enableDebugConsole = 1; // Debug TODO: REMOVE FOR MP
+
+// Default to support MPSF RespawnMP
+respawn				= 3;
+respawnButton		= 1;
+respawnDelay		= 10;
+respawnVehicleDelay	= 10;
+respawnTemplates[] = {"ReviveMP","RespawnMP"};
+
+// Battlefield Clearance
+corpseManagerMode = 1;
+corpseLimit = 15;
+corpseRemovalMinTime = 60;
+corpseRemovalMaxTime = 120;
+wreckManagerMode = 1;
+wreckLimit = 15;
+wreckRemovalMinTime = 60;
+wreckRemovalMaxTime = 120;
+minPlayerDistance = 500;
+
+// Header
+class Header {
+	gameType = Coop;
+	minPlayers = 1;
+	maxPlayers = 48;
+};
+
+class CfgRemoteExec {
+	class Functions {
+		class BIS_fnc_callscriptedeventhandler { jip = 0; }; // Required for MPSF
+	};
+};
+
+class Params {
+	#include "mpsf\params.hpp"
+};
+
+class CfgFunctions {
+	#include "mpsf\cfgFunctions.hpp"
+};
+
+class CfgNotifications {
+	#include "mpsf\cfgNotifications.hpp"
+};
+
+class RscTitles {
+	#include "mpsf\RscTitle.hpp"
+};
+
+class CfgHints {
+	#include "mpsf\cfgHints.hpp"
+};
+
+class CfgRoles {
+	#include "mpsf\configuration\cfgRoles.hpp"
+};
+
+class CfgRespawnTemplates {
+	#include "mpsf\cfgRespawnTemplates.hpp"
+};

@@ -1,0 +1,580 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Steam\SteamApps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, fn_haloFSM.fsm">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"START",0,250,225.000000,-150.000000,325.000000,-100.000000,0.000000,"START"};
+item1[] = {"isValidMan",4,218,350.000000,-75.000000,450.000000,-25.000000,1.000000,"isValidMan"};
+item2[] = {"notValid",4,218,100.000000,-75.000000,200.000000,-25.000000,0.000000,"notValid"};
+item3[] = {"EXIT",1,250,100.000000,0.000000,200.000000,50.000000,0.000000,"EXIT"};
+item4[] = {"prepareUnit",2,250,350.000000,0.000000,450.000000,50.000000,0.000000,"prepareUnit"};
+item5[] = {"isLeader",4,218,475.000000,0.000000,575.000000,50.000000,2.000000,"isLeader"};
+item6[] = {"prepareGroup",2,250,475.000000,75.000000,575.000000,125.000000,0.000000,"prepareGroup"};
+item7[] = {"readyJump",4,218,350.000000,75.000000,450.000000,125.000000,1.000000,"readyJump"};
+item8[] = {"setJump",2,250,350.000000,150.000000,450.000000,200.000000,0.000000,"setJump"};
+item9[] = {"inFreefall",4,218,475.000000,150.000000,575.000000,200.000000,1.000000,"inFreefall"};
+item10[] = {"setFreefall",2,250,350.000000,225.000000,450.000000,275.000000,0.000000,"setFreefall"};
+item11[] = {"inParachute",4,218,475.000000,300.000000,575.000000,350.000000,1.000000,"inParachute"};
+item12[] = {"onGround",4,218,350.000000,450.000000,450.000000,500.000000,2.000000,"onGround"};
+item13[] = {"autoOpenEnabled",4,218,475.000000,225.000000,575.000000,275.000000,2.000000,"autoOpenEnabled"};
+item14[] = {"autoOpen",2,250,350.000000,300.000000,450.000000,350.000000,0.000000,"autoOpen"};
+item15[] = {"setParachute",2,250,350.000000,375.000000,450.000000,425.000000,0.000000,"setParachute"};
+item16[] = {"EndJump",1,250,350.000000,525.000000,450.000000,575.000000,0.000000,"EndJump"};
+item17[] = {"isValidVehicle",4,218,225.000000,-75.000000,325.000000,-25.000000,2.000000,"isValidVehicle"};
+item18[] = {"prepareVehicle",2,250,225.000000,0.000000,325.000000,50.000000,0.000000,"prepareVehicle"};
+item19[] = {"hasNoCrew",4,218,225.000000,75.000000,325.000000,125.000000,1.000000,"hasNoCrew"};
+item20[] = {"haloVehicle",2,250,225.000000,150.000000,325.000000,200.000000,0.000000,"haloVehicle"};
+item21[] = {"onGroundVeh",4,218,225.000000,225.000000,325.000000,275.000000,0.000000,"onGroundVeh"};
+item22[] = {"EndVehJump",1,250,225.000000,450.000000,325.000000,500.000000,0.000000,"EndVehJump"};
+item23[] = {"detachVeh",2,250,225.000000,300.000000,325.000000,350.000000,0.000000,"detachVeh"};
+item24[] = {"checkvehChutes",4,218,225.000000,375.000000,325.000000,425.000000,0.000000,"checkvehChutes"};
+link0[] = {0,1};
+link1[] = {0,2};
+link2[] = {0,17};
+link3[] = {1,4};
+link4[] = {2,3};
+link5[] = {4,5};
+link6[] = {4,7};
+link7[] = {5,6};
+link8[] = {6,7};
+link9[] = {7,8};
+link10[] = {8,9};
+link11[] = {8,12};
+link12[] = {9,10};
+link13[] = {10,11};
+link14[] = {10,12};
+link15[] = {10,13};
+link16[] = {11,15};
+link17[] = {12,16};
+link18[] = {13,14};
+link19[] = {14,11};
+link20[] = {14,12};
+link21[] = {15,12};
+link22[] = {17,18};
+link23[] = {18,19};
+link24[] = {19,20};
+link25[] = {20,21};
+link26[] = {21,23};
+link27[] = {23,24};
+link28[] = {24,22};
+globals[] = {0.000000,0,0,0,0,640,480,1,38,6316128,1,-61.476257,712.617126,665.352051,-195.244461,1674,1164,1};
+window[] = {2,-1,-1,-1,-1,927,190,1450,190,3,1701};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "fn_haloFSM.fsm";
+        class States
+        {
+                /*%FSM<STATE "START">*/
+                class START
+                {
+                        name = "START";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"_this params [" \n
+                         "	[""_unit"",objNull,[objNull]]" \n
+                         "	,[""_position"",[],[[]]]" \n
+                         "	,[""_altitude"",1500,[0]]" \n
+                         "];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "isValidVehicle">*/
+                                class isValidVehicle
+                                {
+                                        itemno = 17;
+                                        priority = 2.000000;
+                                        to="prepareVehicle";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(isNull _unit)" \n
+                                         "&& count _position >= 2" \n
+                                         "&& _altitude >= 150" \n
+                                         "&& ({_unit isKindof _x} count [""LandVehicle"",""Ship""]) > 0" \n
+                                         "&& local _unit"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "isValidMan">*/
+                                class isValidMan
+                                {
+                                        itemno = 1;
+                                        priority = 1.000000;
+                                        to="prepareUnit";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(isNull _unit)" \n
+                                         "&& count _position >= 2" \n
+                                         "&& _altitude >= 150" \n
+                                         "&& _unit isKindof ""CaManBase""" \n
+                                         "&& local _unit"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "notValid">*/
+                                class notValid
+                                {
+                                        itemno = 2;
+                                        priority = 0.000000;
+                                        to="EXIT";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "EXIT">*/
+                class EXIT
+                {
+                        name = "EXIT";
+                        itemno = 3;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "prepareUnit">*/
+                class prepareUnit
+                {
+                        name = "prepareUnit";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"_unitLoadout = [_unit,""""] call (missionNamespace getVariable [""MPSF_fnc_getUnitLoadout"",{[]}]);"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "isLeader">*/
+                                class isLeader
+                                {
+                                        itemno = 5;
+                                        priority = 2.000000;
+                                        to="prepareGroup";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"Leader group _unit == _unit"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "readyJump">*/
+                                class readyJump
+                                {
+                                        itemno = 7;
+                                        priority = 1.000000;
+                                        to="setJump";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "prepareGroup">*/
+                class prepareGroup
+                {
+                        name = "prepareGroup";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "readyJump">*/
+                                class readyJump
+                                {
+                                        itemno = 7;
+                                        priority = 1.000000;
+                                        to="setJump";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "setJump">*/
+                class setJump
+                {
+                        name = "setJump";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/"_backpack	= backpack _unit;" \n
+                         "_isBackpack	= if(_backpack == """") then { false }else{ !(isNull (unitBackpack _unit)) };" \n
+                         "" \n
+                         "removeHeadgear _unit;" \n
+                         "removeBackpack _unit;" \n
+                         "" \n
+                         "_unit addHeadgear ([""H_CrewHelmetHeli_O"",""H_CrewHelmetHeli_B"",""H_CrewHelmetHeli_I"", ""H_CrewHelmetHeli_I""] select ([side _unit] call BIS_fnc_sideID));" \n
+                         "_unit addBackpack ""B_Parachute"";" \n
+                         "" \n
+                         "_packHolder = if(_isBackpack) then { createVehicle [""groundWeaponHolder"", [0,0,0], [], 0, ""can_collide""] }else{ nil };" \n
+                         "if(!isNil ""_packHolder"") then { _packHolder addBackpackCargoGlobal [_backpack, 1] };" \n
+                         "" \n
+                         "_colour = ""NONE"";" \n
+                         "_chemLight = switch (toLower _colour) do {" \n
+                         "	case ""green"":	{ ""Chemlight_green"" };" \n
+                         "	case ""blue"":	{ ""Chemlight_blue"" };" \n
+                         "	case ""yellow"":	{ ""Chemlight_yellow"" };" \n
+                         "	default			{ ""Chemlight_red"" };" \n
+                         "};" \n
+                         "" \n
+                         "_light = _chemLight createVehicle [0,0,0]; //create the chemlight" \n
+                         "" \n
+                         "_position set [2,_altitude];" \n
+                         "_unit setPos _position;" \n
+                         "" \n
+                         "_autoOpenAction = _unit addAction [" \n
+                         "	""Enable AutoOpen""" \n
+                         "	,{(_this select 0) setVariable [""MPSF_gVar_enableAutoOpen"",true];}" \n
+                         "	,[]" \n
+                         "	,0" \n
+                         "	,true" \n
+                         "	,true" \n
+                         "	,""""" \n
+                         "	,""!(_target getVariable ['MPSF_gVar_enableAutoOpen',false])""" \n
+                         "];" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "onGround">*/
+                                class onGround
+                                {
+                                        itemno = 12;
+                                        priority = 2.000000;
+                                        to="EndJump";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isTouchingGround _unit || (getPos _unit select 2) < 2"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "inFreefall">*/
+                                class inFreefall
+                                {
+                                        itemno = 9;
+                                        priority = 1.000000;
+                                        to="setFreefall";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"animationState _unit == ""HaloFreeFall_non"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "setFreefall">*/
+                class setFreefall
+                {
+                        name = "setFreefall";
+                        itemno = 10;
+                        init = /*%FSM<STATEINIT""">*/"if !(isPlayer _unit) then {" \n
+                         "	_unit allowDamage FALSE;" \n
+                         "	_unit switchMove ""HaloFreeFall_non"";" \n
+                         "	_unit disableAI ""ANIM"";" \n
+                         "};" \n
+                         "" \n
+                         "if(!isNil ""_packHolder"") then {" \n
+                         "	_packHolder attachTo [_unit,[-0.12,-0.02,-.74],""pelvis""];" \n
+                         "	_packHolder setVectorDirAndUp [[0,-1,-0.05],[0,0,-1]];" \n
+                         "};" \n
+                         "" \n
+                         "if (_unit == player && animationState _unit == ""HaloFreeFall_non"") then {" \n
+                         "	""dynamicBlur"" ppEffectEnable true;" \n
+                         "	""dynamicBlur"" ppEffectAdjust [6];" \n
+                         "	""dynamicBlur"" ppEffectCommit 0;" \n
+                         "	""dynamicBlur"" ppEffectAdjust [0.0];" \n
+                         "	""dynamicBlur"" ppEffectCommit 5;" \n
+                         "	[_unit] spawn {" \n
+                         "		while { animationState (_this select 0) == ""HaloFreeFall_non"" || (getPos (_this select 0) select 2) > 1} do {" \n
+                         "			playSound ""BIS_HALO_Flapping"";" \n
+                         "			sleep 4.2;" \n
+                         "		};" \n
+                         "	};" \n
+                         "};" \n
+                         "" \n
+                         "_light attachTo [_unit,[0,-0.07,0.06],""LeftShoulder""];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "onGround">*/
+                                class onGround
+                                {
+                                        itemno = 12;
+                                        priority = 2.000000;
+                                        to="EndJump";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isTouchingGround _unit || (getPos _unit select 2) < 2"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "autoOpenEnabled">*/
+                                class autoOpenEnabled
+                                {
+                                        itemno = 13;
+                                        priority = 2.000000;
+                                        to="autoOpen";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(getPos _unit select 2) < 150 && _unit getVariable [""MPSF_gVar_enableAutoOpen"",false]"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "inParachute">*/
+                                class inParachute
+                                {
+                                        itemno = 11;
+                                        priority = 1.000000;
+                                        to="setParachute";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"animationState _unit == ""para_pilot"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "autoOpen">*/
+                class autoOpen
+                {
+                        name = "autoOpen";
+                        itemno = 14;
+                        init = /*%FSM<STATEINIT""">*/"_unit action [""OpenParachute"", _unit];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "onGround">*/
+                                class onGround
+                                {
+                                        itemno = 12;
+                                        priority = 2.000000;
+                                        to="EndJump";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isTouchingGround _unit || (getPos _unit select 2) < 2"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "inParachute">*/
+                                class inParachute
+                                {
+                                        itemno = 11;
+                                        priority = 1.000000;
+                                        to="setParachute";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"animationState _unit == ""para_pilot"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "setParachute">*/
+                class setParachute
+                {
+                        name = "setParachute";
+                        itemno = 15;
+                        init = /*%FSM<STATEINIT""">*/"if(animationState _unit == ""para_pilot"") then {" \n
+                         "	_unit spawn {" \n
+                         "		sleep 1;" \n
+                         "		[vehicle _this,0,0] call bis_fnc_setpitchbank; // Fix Overspeed Issue forcing spiral" \n
+                         "	};" \n
+                         "};" \n
+                         "" \n
+                         "if(!isNil ""_packHolder"") then {" \n
+                         "	_packHolder attachTo [vehicle _unit,[-0.07,0.67,-0.13],""pelvis""];" \n
+                         "	_packHolder setVectorDirAndUp [[0,-0.2,-1],[0,1,0]];" \n
+                         "};" \n
+                         "" \n
+                         "if (_unit == player && animationState _unit == ""para_pilot"") then {" \n
+                         "	[] spawn {" \n
+                         "		playSound ""BIS_Steerable_Parachute_Opening""; //play chute opening sound" \n
+                         "		setAperture 0.05;" \n
+                         "		setAperture -1;" \n
+                         "		""DynamicBlur"" ppEffectEnable true;" \n
+                         "		""DynamicBlur"" ppEffectAdjust [8.0];" \n
+                         "		""DynamicBlur"" ppEffectCommit 0.01;" \n
+                         "		sleep 1;" \n
+                         "		""DynamicBlur"" ppEffectAdjust [0.0];" \n
+                         "		""DynamicBlur"" ppEffectCommit 3;" \n
+                         "		sleep 3;" \n
+                         "		""DynamicBlur"" ppEffectEnable false;" \n
+                         "		""RadialBlur"" ppEffectAdjust [0.0, 0.0, 0.0, 0.0];" \n
+                         "		""RadialBlur"" ppEffectCommit 1.0;" \n
+                         "		""RadialBlur"" ppEffectEnable false;" \n
+                         "	};" \n
+                         "	[_unit] spawn {" \n
+                         "		while { animationState (_this select 0) == ""para_pilot"" || (getPos (_this select 0) select 2) > 2} do {" \n
+                         "			playSound ""BIS_HALO_Flapping"";" \n
+                         "			sleep 4.2;" \n
+                         "		};" \n
+                         "	};" \n
+                         "};" \n
+                         "" \n
+                         "_light attachTo [vehicle _unit,[-0.13,-0.09,0.56],""LeftShoulder""];" \n
+                         "_light setVectorDirAndUp [[0,0,1],[0,1,0]];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "onGround">*/
+                                class onGround
+                                {
+                                        itemno = 12;
+                                        priority = 2.000000;
+                                        to="EndJump";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isTouchingGround _unit || (getPos _unit select 2) < 2"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "EndJump">*/
+                class EndJump
+                {
+                        name = "EndJump";
+                        itemno = 16;
+                        init = /*%FSM<STATEINIT""">*/"if !(isPlayer _unit) then {" \n
+                         "	_unit enableAI ""ANIM"";" \n
+                         "	_unit setPos [(getPos _unit select 0), (getPos _unit select 1), 0];" \n
+                         "	_unit setVelocity [0,0,0];" \n
+                         "	_unit setVectorUp [0,0,1];" \n
+                         "	_unit spawn { sleep 1; _this allowDamage TRUE; };" \n
+                         "};" \n
+                         "" \n
+                         "if (_unit == player) then {" \n
+                         "	playSound ""BIS_Steerable_Parachute_Opening"";" \n
+                         "};" \n
+                         "" \n
+                         "if(!isNil ""_packHolder"") then {" \n
+                         "	detach _packHolder;" \n
+                         "	deleteVehicle _packHolder;" \n
+                         "};" \n
+                         "" \n
+                         "_unit removeAction _autoOpenAction;" \n
+                         "_unit setVariable [""MPSF_gVar_enableAutoOpen"",nil];" \n
+                         "" \n
+                         "detach _light;" \n
+                         "deleteVehicle _light; //delete the chemlight" \n
+                         "" \n
+                         "[_unit,_unitLoadout] call (missionNamespace getVariable [""MPSF_fnc_setUnitLoadout"",{[]}]);"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "prepareVehicle">*/
+                class prepareVehicle
+                {
+                        name = "prepareVehicle";
+                        itemno = 18;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "hasNoCrew">*/
+                                class hasNoCrew
+                                {
+                                        itemno = 19;
+                                        priority = 1.000000;
+                                        to="haloVehicle";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"count crew _unit == 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "haloVehicle">*/
+                class haloVehicle
+                {
+                        name = "haloVehicle";
+                        itemno = 20;
+                        init = /*%FSM<STATEINIT""">*/"_position set [2,100 max _altitude min 150];" \n
+                         "_unit setPos _position;" \n
+                         "" \n
+                         "private [""_class"",""_para"",""_paras"",""_p"",""_veh"",""_vel"",""_time""];" \n
+                         "_class = format [""%1_parachute_02_F"",toString [(toArray faction _unit) select 0]];" \n
+                         "_para = createVehicle [_class, [0,0,0], [], 0, ""FLY""];" \n
+                         "_para setDir getDir _unit;" \n
+                         "_para setPos getPos _unit;" \n
+                         "_paras =  [_para];" \n
+                         "_unit attachTo [_para, [0,2,0]];" \n
+                         "" \n
+                         "{" \n
+                         "	_p = createVehicle [_class, [0,0,0], [], 0, ""FLY""];" \n
+                         "	_paras pushBack _p;" \n
+                         "	_p attachTo [_para, [0,0,0]];" \n
+                         "	_p setVectorUp _x;" \n
+                         "} count [" \n
+                         "	[0.5,0.4,0.6],[-0.5,0.4,0.6],[0.5,-0.4,0.6],[-0.5,-0.4,0.6]" \n
+                         "];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "onGroundVeh">*/
+                                class onGroundVeh
+                                {
+                                        itemno = 21;
+                                        priority = 0.000000;
+                                        to="detachVeh";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"((getPos _unit) select 2) < 4"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "EndVehJump">*/
+                class EndVehJump
+                {
+                        name = "EndVehJump";
+                        itemno = 22;
+                        init = /*%FSM<STATEINIT""">*/"{" \n
+                         "	if (!isNull _x) then {deleteVehicle _x};" \n
+                         "} count _paras;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "detachVeh">*/
+                class detachVeh
+                {
+                        name = "detachVeh";
+                        itemno = 23;
+                        init = /*%FSM<STATEINIT""">*/"_vel = velocity _unit;" \n
+                         "detach _unit;" \n
+                         "_unit setVelocity _vel;" \n
+                         "" \n
+                         "{" \n
+                         "	detach _x;" \n
+                         "	_x disableCollisionWith _unit;   " \n
+                         "} count _paras;" \n
+                         "" \n
+                         "_time = time + 5;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "checkvehChutes">*/
+                                class checkvehChutes
+                                {
+                                        itemno = 24;
+                                        priority = 0.000000;
+                                        to="EndVehJump";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _time"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="START";
+        finalStates[] =
+        {
+                "EXIT",
+                "EndJump",
+                "EndVehJump",
+        };
+};
+/*%FSM</COMPILE>*/
