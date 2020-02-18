@@ -1,0 +1,13 @@
+planned features PubPOps (in no order):
+
+- change Arsenal
+- add restrictions
+- add Admin-Console and ZEUS
+- change Unit-types of players, civs and enemies
+- add parameters (time of day,...?)
+- building the base
+- add viewdistance-script
+
+-- create new missions
+-- port to more maps
+-- difficulty adjustments
