@@ -1,7 +1,5 @@
 planned features PubPOps (in no order):
 
-- change Arsenal
-- add restrictions
 - add Admin-Console and ZEUS
 - change Unit-types of players, civs and enemies - done for Takistan
 - add parameters (time of day,...?), edit existing ones, so there`s no conflict with ACE

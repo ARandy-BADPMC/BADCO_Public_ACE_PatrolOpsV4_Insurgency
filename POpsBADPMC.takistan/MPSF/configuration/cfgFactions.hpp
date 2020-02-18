@@ -9,120 +9,120 @@ class Blufor_Altis {
 	side = 1;
 	class Groups {
 		class TargetHVT {
-			classNames[] = {"rhsusf_usmc_marpat_d_officer","rhsusf_usmc_marpat_d_spotter"};
+			classNames[] = {"B_Officer_F","B_Recon_JTAC_F"};
 		};
 		class TargetHVT_INS {
-			classNames[] = {"LOP_PESH_IND_Infantry_SL","LOP_PESH_IND_Infantry_Marksman"};
+			classNames[] = {"B_G_officer_F","B_G_Sharpshooter_F"};
 		};
 		class Squad8 {
-			classNames[] = {"rhsusf_usmc_marpat_d_teamleader","rhsusf_usmc_marpat_d_engineer","rhsusf_usmc_marpat_d_rifleman_m4","rhsusf_usmc_marpat_d_rifleman_m4","rhsusf_usmc_marpat_d_autorifleman_m249","rhsusf_usmc_marpat_d_autorifleman_m249_ass","rhsusf_usmc_marpat_d_riflemanat","rhsusf_usmc_marpat_d_grenadier"};
+			classNames[] = {"B_Soldier_TL_F","B_Soldier_GL_F","B_Soldier_F","B_Soldier_AA_F","B_Soldier_AR_F","B_Soldier_AT_F","B_Soldier_M_F","B_medic_F"};
 		};
 		class Squad8_AA {
-			classNames[] = {"rhsusf_usmc_marpat_d_teamleader","rhsusf_usmc_marpat_d_engineer","rhsusf_usmc_marpat_d_rifleman_m4","rhsusf_usmc_marpat_d_rifleman_m4","rhsusf_usmc_marpat_d_autorifleman_m249","rhsusf_usmc_marpat_d_autorifleman_m249_ass","rhsusf_usmc_marpat_d_riflemanat","rhsusf_usmc_marpat_d_stinger"};
+			classNames[] = {"B_Soldier_TL_F","B_Soldier_GL_F","B_Soldier_F","B_Soldier_A_F","B_Soldier_GL_F","B_Soldier_AA_F","B_Soldier_AA_F","B_medic_F"};
 		};
 		class Squad8_AR {
-			classNames[] = {"rhsusf_usmc_marpat_d_teamleader","rhsusf_usmc_marpat_d_engineer","rhsusf_usmc_marpat_d_rifleman_m4","rhsusf_usmc_marpat_d_rifleman_m4","rhsusf_usmc_marpat_d_autorifleman_m249","rhsusf_usmc_marpat_d_autorifleman_m249_ass","rhsusf_usmc_marpat_d_autorifleman_m249","rhsusf_usmc_marpat_d_autorifleman_m249_ass"};
+			classNames[] = {"B_Soldier_TL_F","B_Soldier_GL_F","B_Soldier_F","B_Soldier_A_F","B_Soldier_GL_F","B_Soldier_AR_F","B_Soldier_AR_F","B_medic_F"};
 		};
 		class Squad8_AT {
-			classNames[] = {"rhsusf_usmc_marpat_d_teamleader","rhsusf_usmc_marpat_d_engineer","rhsusf_usmc_marpat_d_rifleman_m4","rhsusf_usmc_marpat_d_rifleman_m4","rhsusf_usmc_marpat_d_autorifleman_m249","rhsusf_usmc_marpat_d_autorifleman_m249_ass","rhsusf_usmc_marpat_d_riflemanat","rhsusf_usmc_marpat_d_javelin"};
+			classNames[] = {"B_Soldier_TL_F","B_Soldier_GL_F","B_Soldier_F","B_Soldier_A_F","B_Soldier_GL_F","B_Soldier_AT_F","B_Soldier_LAT_F","B_medic_F"};
 		};
 		class Squad8_M {
-			classNames[] = {"rhsusf_usmc_marpat_d_teamleader","rhsusf_usmc_marpat_d_engineer","rhsusf_usmc_marpat_d_rifleman_m4","rhsusf_usmc_marpat_d_rifleman_m4","rhsusf_usmc_marpat_d_autorifleman_m249","rhsusf_usmc_marpat_d_autorifleman_m249_ass","rhsusf_usmc_marpat_d_riflemanat","rhsusf_usmc_marpat_d_grenadier"};
+			classNames[] = {"B_Soldier_TL_F","B_Soldier_GL_F","B_Soldier_F","B_Soldier_A_F","B_Soldier_GL_F","B_Soldier_M_F","B_Soldier_M_F","B_medic_F"};
 		};
 		class Squad8_INS {
-			classNames[] = {"LOP_PESH_IND_Infantry_SL","LOP_PESH_IND_Infantry_Corpsman","LOP_PESH_IND_Infantry_Engineer","LOP_PESH_IND_Infantry_GL","LOP_PESH_IND_Infantry_AT","LOP_PESH_IND_Infantry_MG","LOP_PESH_IND_Infantry_Marksman","LOP_PESH_IND_Infantry_Rifleman_2"};
+			classNames[] = {"B_G_Soldier_TL_F","B_G_Soldier_GL_F","B_G_Soldier_LAT_F","B_G_Soldier_AR_F","B_G_Soldier_AR_F","B_G_Soldier_LAT_F","B_G_Sharpshooter_F","B_G_medic_F"};
 		};
 		class Squad4 {
-			classNames[] = {"rhsusf_usmc_marpat_d_teamleader","rhsusf_usmc_marpat_d_engineer","rhsusf_usmc_marpat_d_rifleman_m4","rhsusf_usmc_marpat_d_rifleman_m4"};
+			classNames[] = {"B_Soldier_TL_F","B_Soldier_GL_F","B_Soldier_F","B_medic_F"};
 		};
 		class Squad4_AA {
-			classNames[] = {"rhsusf_usmc_marpat_d_autorifleman_m249","rhsusf_usmc_marpat_d_autorifleman_m249_ass","rhsusf_usmc_marpat_d_riflemanat","rhsusf_usmc_marpat_d_stinger"};
+			classNames[] = {"B_Soldier_TL_F","B_Soldier_GL_F","B_Soldier_AA_F","B_Soldier_AA_F"};
 		};
 		class Squad4_AR {
-			classNames[] = {"rhsusf_usmc_marpat_d_rifleman_m4","rhsusf_usmc_marpat_d_rifleman_m4","rhsusf_usmc_marpat_d_autorifleman_m249","rhsusf_usmc_marpat_d_autorifleman_m249_ass"};
+			classNames[] = {"B_Soldier_TL_F","B_Soldier_GL_F","B_Soldier_AR_F","B_Soldier_AR_F"};
 		};
 		class Squad4_AT {
-			classNames[] = {"rhsusf_usmc_marpat_d_autorifleman_m249","rhsusf_usmc_marpat_d_autorifleman_m249_ass","rhsusf_usmc_marpat_d_riflemanat","rhsusf_usmc_marpat_d_javelin"};
+			classNames[] = {"B_Soldier_TL_F","B_Soldier_GL_F","B_Soldier_AT_F","B_Soldier_LAT_F"};
 		};
 		class Squad4_M {
-			classNames[] = {"rhsusf_usmc_marpat_d_teamleader","rhsusf_usmc_marpat_d_engineer","rhsusf_usmc_marpat_d_rifleman_m4","rhsusf_usmc_marpat_d_rifleman_m4"};
+			classNames[] = {"B_Soldier_TL_F","B_Soldier_GL_F","B_Soldier_M_F","B_Soldier_M_F"};
 		};
 		class Squad4_INS {
-			classNames[] = {"LOP_PESH_IND_Infantry_SL","LOP_PESH_IND_Infantry_Corpsman","LOP_PESH_IND_Infantry_Engineer","LOP_PESH_IND_Infantry_GL"};
+			classNames[] = {"B_G_Soldier_TL_F","B_G_Soldier_GL_F","B_G_Soldier_LAT_F","B_G_medic_F"};
 		};
 		class Sniper {
-			classNames[] = {"rhsusf_usmc_marpat_d_sniper","rhsusf_usmc_marpat_d_spotter"};
+			classNames[] = {"B_ghillie_sard_F","B_ghillie_sard_F"};
 		};
 		class Sniper_INS {
-			classNames[] = {"LOP_PESH_IND_Infantry_Sniper","LOP_PESH_IND_Infantry_Corpsman"};
+			classNames[] = {"B_G_Sharpshooter_F","B_G_Sharpshooter_F"};
 		};
 		class ParaMilitary {
-			classNames[] = {"LOP_PMC_Infantry_SL","LOP_PMC_Infantry_Rifleman_2","LOP_PMC_Infantry_EOD","LOP_PMC_Infantry_GL","LOP_PMC_Infantry_MG_Asst","LOP_PMC_Infantry_Corpsman","LOP_PMC_Infantry_Marksman_2","LOP_PMC_Infantry_Engineer"};
+			classNames[] = {"B_G_Soldier_TL_F","B_G_Soldier_GL_F","B_G_Soldier_LAT_F","B_G_Soldier_AR_F","B_G_Soldier_AR_F","B_G_Soldier_LAT_F","B_G_Sharpshooter_F","B_G_medic_F"};
 		};
 		class SpecOps {
-			classNames[] = {"rhsusf_usmc_recon_marpat_d_teamleader_fast","rhsusf_usmc_recon_marpat_d_marksman_fast","rhsusf_usmc_recon_marpat_d_rifleman_at_fast","rhsusf_usmc_recon_marpat_d_autorifleman_fast","rhsusf_usmc_recon_marpat_d_rifleman_fast"};
+			classNames[] = {"B_Recon_TL_F","B_Recon_F","B_Recon_M_F","B_Recon_LAT_F","B_Recon_JTAC_F"};
 		};
 		class SpecOps_Elite {
-			classNames[] = {"rhsusf_socom_marsoc_teamchief","rhsusf_socom_marsoc_sarc","rhsusf_socom_marsoc_cso_mk17","rhsusf_socom_marsoc_cso_breacher","rhsusf_socom_marsoc_sniper"};
+			classNames[] = {"B_CTRG_soldier_GL_LAT_F","B_CTRG_soldier_AR_A_F","B_CTRG_Sharphooter_F","B_CTRG_soldier_engineer_exp_F","B_CTRG_soldier_M_medic_F"};
 		};
 	};
 	class Vehicles {
 		class VehicleHVT {
-			classNames[] = {"rhsusf_M977A4_AMMO_BKIT_usarmy_d","rhsusf_m1240a1_m240_usmc_d"};
+			classNames[] = {"B_Truck_01_ammo_F","B_APC_Tracked_01_CRV_F"};
 		};
 		class VehicleHVT_INS {
-			classNames[] = {"LOP_PESH_IND_M1025_D"};
+			classNames[] = {"B_G_Offroad_01_repair_F"};
 		};
 		class Car {
-			classNames[] = {"rhsusf_m998_d_s_4dr"};
+			classNames[] = {"B_MRAP_01_F","B_LSV_01_unarmed_black_F","B_LSV_01_unarmed_sand_F"};
 		};
 		class Car_INS {
-			classNames[] = {"LOP_PESH_IND_M1025_W_M2"};
+			classNames[] = {"B_G_Offroad_01_F"};
 		};
 		class CarTurret {
-			classNames[] = {"rhsusf_m1025_d_s_m2","rhsusf_m1045_d_s","rhsusf_m1240a1_m2crows_usmc_d","rhsusf_m1240a1_m2_usmc_d","rhsusf_m1240a1_m240_usmc_d","rhsusf_m1240a1_mk19_usmc_d"};
+			classNames[] = {"B_MRAP_01_gmg_F","B_MRAP_01_hmg_F","B_LSV_01_armed_black_F","B_LSV_01_armed_sand_F"};
 		};
 		class CarTurret_INS {
-			classNames[] = {"LOP_PESH_IND_M1025_W_M2"};
+			classNames[] = {"B_G_Offroad_01_armed_F"};
 		};
 		class Truck {
-			classNames[] = {"rhsusf_M1083A1P2_D_fmtv_usarmy","rhsusf_M1078A1P2_B_D_fmtv_usarmy","rhsusf_CGRCAT1A2_usmc_d"};
+			classNames[] = {"B_Truck_01_transport_F","B_Truck_01_covered_F"};
 		};
 		class Truck_INS {
-			classNames[] = {"LOP_PESH_IND_HEMTT_Transport_D","LOP_PESH_IND_Truck"};
+			classNames[] = {"B_G_Van_01_transport_F"};
 		};
 		class Truck_Support {
-			classNames[] = {"rhsusf_M978A4_BKIT_usarmy_d","rhsusf_M977A4_REPAIR_usarmy_d","rhsusf_M977A4_AMMO_usarmy_d"};
+			classNames[] = {"B_Truck_01_Repair_F","B_Truck_01_ammo_F","B_Truck_01_fuel_F"};
 		};
 		class Armour_AA {
-			classNames[] = {"RHS_M6"};
+			classNames[] = {"B_APC_Tracked_01_AA_F"};
 		};
 		class Armour_APC {
-			classNames[] = {"RHS_M2A3_BUSKI","rhsusf_stryker_m1126_m2_d","rhsusf_m113d_usarmy","rhsusf_m113d_usarmy_M240"};
+			classNames[] = {"B_APC_Wheeled_01_cannon_F","B_APC_Tracked_01_rcws_F"};
 		};
 		class Armour_MBT {
-			classNames[] = {"rhsusf_m1a1fep_d"};
+			classNames[] = {"B_MBT_01_cannon_F","B_MBT_01_TUSK_F"};
 		};
 		class Armour_Art {
-			classNames[] = {"rhsusf_m109d_usarmy","rhsusf_M142_usarmy_D"};
+			classNames[] = {"B_MBT_01_arty_F","B_MBT_01_mlrs_F"};
 		};
 		class CAS_Heli {
-			classNames[] = {"RHS_AH1Z","RHS_UH1Y_d"};
+			classNames[] = {"B_Heli_Light_01_dynamicLoadout_F","B_Heli_Attack_01_F"};
 		};
 		class CAS_Air {
-			classNames[] = {"RHS_A10"};
+			classNames[] = {"B_Plane_CAS_01_F"};
 		};
 		class CAS_UAV {
 			classNames[] = {"B_UAV_02_CAS_F","B_UAV_05_F"};
 		};
 		class Fighter_Plane {
-			classNames[] = {"rhsusf_f22"};
+			classNames[] = {"B_Plane_Fighter_01_F","B_Plane_Fighter_01_Stealth_F"};
 		};
 		class Transport_Heli {
-			classNames[] = {"rhsusf_CH53E_USMC_GAU21_D","RHS_UH1Y_d","RHS_UH60M_d","RHS_CH_47F_light"};
+			classNames[] = {"B_CTRG_Heli_Transport_01_sand_F","B_Heli_Transport_01_F","B_Heli_Transport_03_F"};
 		};
 		class Transport_Air {
-			classNames[] = {"RHS_C130J"};
+			classNames[] = {"B_T_VTOL_01_infantry_F"};
 		};
 		class UAV {
 			classNames[] = {"B_UAV_02_CAS_F","B_UAV_05_F"};
@@ -131,125 +131,125 @@ class Blufor_Altis {
 			classNames[] = {"B_UGV_01_rcws_F"};
 		};
 		class Boat {
-			classNames[] = {"rhsusf_mkvsoc"};
+			classNames[] = {"B_Boat_Armed_01_minigun_F"};
 		};
 	};
 };
 class Opfor_Altis {
-	displayName = "Militia";
-	displayLongName = "Middle Eastern Militia";
+	displayName = "AFA";
+	displayLongName = "Altis Freedom Alliance";
 	displayColour = "ColorOpfor";
 	side = 0;
 	class Groups {
 		class TargetHVT {
-			classNames[] = {"LOP_TKA_Infantry_TL"};
+			classNames[] = {"O_Officer_F","O_V_Soldier_TL_hex_F"};
 		};
 		class TargetHVT_INS {
-			classNames[] = {"LOP_AM_Infantry_SL"};
+			classNames[] = {"O_G_officer_F","O_G_Sharpshooter_F"};
 		};
 		class Squad8 {
-			classNames[] = {"LOP_TKA_Infantry_TL","LOP_TKA_Infantry_Marksman","LOP_TKA_Infantry_MG","LOP_TKA_Infantry_Corpsman","LOP_TKA_Infantry_AA","LOP_TKA_Infantry_Rifleman_2","LOP_TKA_Infantry_Rifleman_3","LOP_TKA_Infantry_Rifleman_2"};
+			classNames[] = {"O_Soldier_TL_F","O_Soldier_GL_F","O_Soldier_F","O_Soldier_AA_F","O_Soldier_AR_F","O_Soldier_AT_F","O_soldier_M_F","O_medic_F"};
 		};
 		class Squad8_AA {
-			classNames[] = {"LOP_TKA_Infantry_TL","LOP_TKA_Infantry_Marksman","LOP_TKA_Infantry_MG","LOP_TKA_Infantry_Corpsman","LOP_TKA_Infantry_AA","LOP_TKA_Infantry_Rifleman_2","LOP_TKA_Infantry_Rifleman_3","LOP_TKA_Infantry_Rifleman_2"};
+			classNames[] = {"O_Soldier_TL_F","O_Soldier_GL_F","O_Soldier_F","O_Soldier_A_F","O_Soldier_GL_F","O_Soldier_AA_F","O_Soldier_AA_F","O_medic_F"};
 		};
 		class Squad8_AR {
-			classNames[] = {"LOP_TKA_Infantry_TL","LOP_TKA_Infantry_Marksman","LOP_TKA_Infantry_MG","LOP_TKA_Infantry_Corpsman","LOP_TKA_Infantry_AA","LOP_TKA_Infantry_Rifleman_2","LOP_TKA_Infantry_Rifleman_3","LOP_TKA_Infantry_Rifleman_2"};
+			classNames[] = {"O_Soldier_TL_F","O_Soldier_GL_F","O_Soldier_F","O_Soldier_A_F","O_Soldier_GL_F","O_Soldier_AR_F","O_Soldier_AR_F","O_medic_F"};
 		};
 		class Squad8_AT {
-			classNames[] = {"LOP_TKA_Infantry_TL","LOP_TKA_Infantry_Marksman","LOP_TKA_Infantry_MG","LOP_TKA_Infantry_Corpsman","LOP_TKA_Infantry_AA","LOP_TKA_Infantry_Rifleman_2","LOP_TKA_Infantry_Rifleman_3","LOP_TKA_Infantry_AT"};
+			classNames[] = {"O_Soldier_TL_F","O_Soldier_GL_F","O_Soldier_F","O_Soldier_A_F","O_Soldier_GL_F","O_Soldier_AT_F","O_Soldier_LAT_F","O_medic_F"};
 		};
 		class Squad8_M {
-			classNames[] = {"LOP_TKA_Infantry_TL","LOP_TKA_Infantry_Marksman","LOP_TKA_Infantry_MG","LOP_TKA_Infantry_Corpsman","LOP_TKA_Infantry_AA","LOP_TKA_Infantry_Rifleman_2","LOP_TKA_Infantry_Rifleman_3","LOP_TKA_Infantry_AT"};
+			classNames[] = {"O_Soldier_TL_F","O_Soldier_GL_F","O_Soldier_F","O_Soldier_A_F","O_Soldier_GL_F","O_soldier_M_F","O_soldier_M_F","O_medic_F"};
 		};
 		class Squad8_INS {
-			classNames[] = {"LOP_AM_Infantry_SL","LOP_AM_Infantry_Marksman","LOP_AM_Infantry_Corpsman","LOP_ISTS_Infantry_AR_2","LOP_ISTS_Infantry_AT","rhsgref_nat_specialist_aa","LOP_AM_Infantry_AT","LOP_ISTS_Infantry_B_GL"};
+			classNames[] = {"O_G_Soldier_TL_F","O_G_Soldier_GL_F","O_G_Soldier_LAT_F","O_G_Soldier_AR_F","O_G_Soldier_A_F","O_G_Soldier_M_F","O_G_Sharpshooter_F","O_G_medic_F"};
 		};
 		class Squad4 {
-			classNames[] = {"LOP_TKA_Infantry_TL","LOP_TKA_Infantry_Marksman","LOP_TKA_Infantry_MG","LOP_TKA_Infantry_Corpsman"};
+			classNames[] = {"O_Soldier_TL_F","O_Soldier_GL_F","O_Soldier_F","O_medic_F"};
 		};
 		class Squad4_AA {
-			classNames[] = {"LOP_TKA_Infantry_AA","LOP_TKA_Infantry_Rifleman_2","LOP_TKA_Infantry_Rifleman_3","LOP_TKA_Infantry_AT"};
+			classNames[] = {"O_Soldier_TL_F","O_Soldier_GL_F","O_Soldier_AA_F","O_Soldier_AA_F"};
 		};
 		class Squad4_AR {
-			classNames[] = {"LOP_TKA_Infantry_MG","LOP_TKA_Infantry_Rifleman_2","LOP_TKA_Infantry_Rifleman_3","LOP_TKA_Infantry_AT"};
+			classNames[] = {"O_Soldier_TL_F","O_Soldier_GL_F","O_Soldier_AR_F","O_Soldier_AR_F"};
 		};
 		class Squad4_AT {
-			classNames[] = {"LOP_TKA_Infantry_AA","LOP_TKA_Infantry_Rifleman_2","LOP_TKA_Infantry_AT","LOP_TKA_Infantry_AT"};
+			classNames[] = {"O_Soldier_TL_F","O_Soldier_GL_F","O_Soldier_AT_F","O_Soldier_LAT_F"};
 		};
 		class Squad4_M {
-			classNames[] = {"LOP_TKA_Infantry_TL","LOP_TKA_Infantry_Marksman","LOP_TKA_Infantry_MG","LOP_TKA_Infantry_Corpsman"};
+			classNames[] = {"O_Soldier_TL_F","O_Soldier_GL_F","O_soldier_M_F","O_soldier_M_F"};
 		};
 		class Squad4_INS {
-			classNames[] = {"LOP_ISTS_Infantry_AT","rhsgref_nat_specialist_aa","LOP_AM_Infantry_AT","LOP_ISTS_Infantry_B_GL"};
+			classNames[] = {"O_G_Soldier_TL_F","O_G_Soldier_GL_F","O_G_Soldier_LAT_F","O_G_Soldier_AR_F"};
 		};
 		class Sniper {
-			classNames[] = {"LOP_TKA_Infantry_Marksman","LOP_TKA_Infantry_Rifleman_3"};
+			classNames[] = {"O_ghillie_sard_F","O_ghillie_sard_F"};
 		};
 		class Sniper_INS {
-			classNames[] = {"LOP_AM_Infantry_Rifleman_7","LOP_AM_Infantry_Marksman"};
+			classNames[] = {"O_G_Sharpshooter_F","O_G_Sharpshooter_F"};
 		};
 		class ParaMilitary {
-			classNames[] = {"rhsgref_nat_pmil_scout","rhsgref_nat_pmil_commander","rhsgref_nat_pmil_medic","rhsgref_nat_pmil_saboteur"};
+			classNames[] = {"O_G_Soldier_TL_F","O_G_Soldier_AR_F","O_G_Soldier_GL_F","O_G_Soldier_M_F","O_G_Soldier_LAT_F"};
 		};
 		class SpecOps {
-			classNames[] = {"rhsgref_nat_pmil_scout","LOP_ISTS_Infantry_B_SL","LOP_ISTS_Infantry_B_Engineer","LOP_ISTS_Infantry_B_Rifleman"};
+			classNames[] = {"O_recon_TL_F","O_recon_F","O_recon_M_F","O_recon_LAT_F","O_recon_exp_F"};
 		};
 		class SpecOps_Elite {
-			classNames[] = {"rhsgref_nat_pmil_scout","LOP_ISTS_Infantry_B_SL","LOP_ISTS_Infantry_B_Engineer","LOP_ISTS_Infantry_B_Rifleman"};
+			classNames[] = {"O_V_Soldier_TL_hex_F","O_V_Soldier_hex_F","O_V_Soldier_M_hex_F","O_V_Soldier_LAT_hex_F","O_V_Soldier_Exp_hex_F"};
 		};
 	};
 	class Vehicles {
 		class VehicleHVT {
-			classNames[] = {"LOP_TKA_UAZ_Open"};
+			classNames[] = {"O_Truck_03_device_F"};
 		};
 		class Car {
-			classNames[] = {"LOP_TKA_UAZ_Open","LOP_TKA_UAZ"};
+			classNames[] = {"O_LSV_02_unarmed_F","O_LSV_02_unarmed_black_F","O_LSV_02_unarmed_arid_F","O_MRAP_02_F"};
 		};
 		class Car_INS {
-			classNames[] = {"LOP_ISTS_Landrover"};
+			classNames[] = {"O_G_Offroad_01_F"};
 		};
 		class CarTurret {
-			classNames[] = {"LOP_TKA_UAZ_SPG","LOP_TKA_UAZ_AGS","LOP_TKA_UAZ_DshKM"};
+			classNames[] = {"O_LSV_02_armed_F","O_LSV_02_armed_black_F","O_LSV_02_armed_arid_F","O_MRAP_02_gmg_F","O_MRAP_02_hmg_F"};
 		};
 		class CarTurret_INS {
-			classNames[] = {"LOP_ISTS_Nissan_PKM"};
+			classNames[] = {"O_G_Offroad_01_armed_F"};
 		};
 		class Truck {
-			classNames[] = {"LOP_TKA_Ural","LOP_TKA_Ural_open"};
+			classNames[] = {"O_Truck_03_transport_F","O_Truck_03_covered_F"};
 		};
 		class Truck_INS {
-			classNames[] = {"LOP_ISTS_Truck"};
+			classNames[] = {"O_Truck_02_transport_F","O_G_Van_01_transport_F"};
 		};
 		class Truck_Support {
-			classNames[] = {"LOP_TKA_Ural","I_G_Van_01_fuel_F","I_G_Van_02_transport_F"};
+			classNames[] = {"O_Truck_03_repair_F","O_Truck_03_ammo_F","O_Truck_03_fuel_F"};
 		};
 		class Armour_AA {
-			classNames[] = {"LOP_TKA_ZSU234"};
+			classNames[] = {"O_APC_Tracked_02_AA_F"};
 		};
 		class Armour_APC {
-			classNames[] = {"LOP_TKA_BTR60","LOP_TKA_BTR70"};
+			classNames[] = {"O_APC_Wheeled_02_rcws_F","O_APC_Tracked_02_cannon_F"};
 		};
 		class Armour_MBT {
-			classNames[] = {"LOP_TKA_T55"};
+			classNames[] = {"O_MBT_02_cannon_F"};
 		};
 		class Armour_Art {
-			classNames[] = {"LOP_TKA_BM21"};
+			classNames[] = {"O_MBT_02_arty_F"};
 		};
 		class CAS_Heli {
-			classNames[] = {"LOP_TKA_Mi24V_AT","LOP_TKA_Mi24V_FAB"};
+			classNames[] = {"O_Heli_Attack_02_F","O_Heli_Attack_02_black_F"};
 		};
 		class CAS_Air {
-			classNames[] = {"RHS_Su25SM_vvs"};
+			classNames[] = {"O_Plane_CAS_02_F"};
 		};
 		class CAS_UAV {
 			classNames[] = {"O_UAV_02_CAS_F","O_T_UAV_04_CAS_F"};
 		};
 		class Fighter_Plane {
-			classNames[] = {"rhs_mig29s_vvs"};
+			classNames[] = {"O_Plane_Fighter_02_F","O_Plane_Fighter_02_Stealth_F"};
 		};
 		class Transport_Heli {
-			classNames[] = {"LOP_TKA_Mi8MT_Cargo"};
+			classNames[] = {"O_Heli_Transport_04_bench_black_F","O_Heli_Transport_04_bench_F","O_Heli_Transport_04_covered_black_F","O_Heli_Transport_04_covered_F"};
 		};
 		class Transport_Air {
 			classNames[] = {"O_T_VTOL_02_infantry_grey_F","O_T_VTOL_02_infantry_hex_F"};

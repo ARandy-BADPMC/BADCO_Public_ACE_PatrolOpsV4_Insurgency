@@ -9,17 +9,8 @@ class CfgMission {
 	FactionTypeCIV 	= "Civilian_Altis";
 
 	class Bases {
-		class Malden_Base_SE {
-			displayName = "Safe Base Bravo";
-		};
-		class Malden_Base_NE {
-			displayName = "Safe Base Charlie";
-		};
-		class Malden_Base_NW {
-			displayName = "Safe Base Delta";
-		};
-		class Malden_USS_Freedom {
-			displayName = "Carrier (USS Freedom)";
+		class Rasman_Airfield {
+			displayName = "Rasman Airfield";
 		};
 	};
 };
@@ -127,7 +118,7 @@ class CfgMissionTasks {
 
 class CfgRespawnMP {
 	enabled = 1;
-	MHQLimit = 3;
+	MHQLimit = 1;
 	MHQvehicles[] = {
 		"B_Truck_01_box_F","B_MRAP_01_F"
 		,"O_Truck_03_repair_F","O_MRAP_02_F"
@@ -135,9 +126,9 @@ class CfgRespawnMP {
 	};
 	class west {
 		respawn[] = {"Base","Group","Rallypoint","Countdown"}; // ,"Wave","Spectator","Trigger"
-		respawnTimer = 120;
-		redeploy[] = {"Base","Group","Halo","Rallypoint"};
-		redeployVehicles[] = {"Base","Halo"};
+		respawnTimer = 30;
+		redeploy[] = {"Base","Group","Rallypoint"};
+		redeployVehicles[] = {"Base"};
 		redeployDelay = 10;
 	};
 	class east: west {};
@@ -145,7 +136,7 @@ class CfgRespawnMP {
 };
 
 class CfgReviveMP {
-	enabled = 1;
+	enabled = 0;
 	enableSkipBleedout = 1;
 	RequireItems[] = {"FirstAidKit","MedKit"};
 	RequireItemsFullHeal[] = {"MedKit"};
@@ -158,8 +149,8 @@ class CfgReviveMP {
 };
 
 class CfgVirtualArmoury {
-	assignRoles = 2;
-	enableFullArmoury = 1;
+	assignRoles = 0;
+	enableFullArmoury = 0;
 	enableVehicleAccess[] = {"All"};
 	class Roles { // Redundant with CfgRoles in description.ext
 		#include "mpsf\configuration\cfgRoles.hpp"
@@ -196,31 +187,140 @@ class CfgVirtualDepot {
 
 	// Force this classname to appear as a distinct vehicle, useful for splitting up models and classnames
 	forceInDepot[] = {
-		"MELB_AH6M_L","MELB_AH6M_M","MELB_MH6M" // MELB Mod
-		// RHS Mod
-		,"RHS_AH1Z_CS"	,"RHS_AH1Z_GS"
-		,"RHS_MELB_AH6M_H","RHS_MELB_AH6M_L","RHS_MELB_AH6M_M","RHS_MELB_H6M","RHS_MELB_MH6M"
-		,"RHS_AH64D_noradar","RHS_AH64D_AA","RHS_AH64D_noradar_AA","RHS_AH64D_CS","RHS_AH64D_noradar_CS","RHS_AH64D_GS","RHS_AH64D_noradar_GS"
-		,"RHS_UH60M_MEV2","RHS_UH1Y_FFAR"
-		,"RHS_UH1Y_GS","RHS_UH1Y_UNARMED"
-		,"RHSgref_b_mi24g_FAB","RHSgref_b_mi24g_UPK23"
-		,"rhsgref_cdf_b_Mi35_AT","rhsgref_cdf_b_Mi35_UPK","rhsgref_cdf_b_Mi35"
-		,"rhsgref_cdf_b_reg_Mi17Sh_FAB","rhsgref_cdf_b_reg_Mi17Sh_UPK"
-		// BIS
-		,"B_T_VTOL_01_vehicle_F","B_Plane_Fighter_01_Stealth_F","O_Plane_Fighter_02_Stealth_F"
-		,"B_G_Van_02_transport_F","B_G_Van_02_vehicle_F"
-		,"O_G_Van_02_transport_F","O_G_Van_02_vehicle_F"
-		,"I_G_Van_02_transport_F","I_G_Van_02_vehicle_F"
-		,"C_IDAP_UAV_06_antimine_F"
+	"RHS_AH1Z",
+	"RHS_AH64D",
+	"RHS_MELB_AH6M",
+	"I_Heli_Transport_02_F",
+	"I_Heli_light_03_dynamicLoadout_F",
+	"I_Heli_light_03_unarmed_F",
+	"RHS_CH_47F_10",
+	"B_Heli_Transport_03_F",
+	"B_Heli_Transport_03_unarmed_F",
+	"rhsusf_CH53E_USMC_D",
+	"O_Heli_Light_02_dynamicLoadout_F",
+	"O_Heli_Light_02_unarmed_F",
+	"C_Heli_Light_01_civil_F",
+	"B_Heli_Light_01_F",
+	"RHS_MELB_MH6M",
+	"RHS_Mi8AMTSh_vvs", 
+	"RHS_Mi24P_vdv",
+	"O_Heli_Transport_04_F", 
+	"RHS_MELB_H6M",
+	"B_Heli_Attack_01_dynamicLoadout_F",
+	"RHS_UH1Y_d",
+	"RHS_UH1Y_UNARMED_d",
+	"RHS_UH60M_d",
+	"RHS_UH60M_ESSS_d",
+	"RHS_UH60M2_d",
+	"RHS_UH60M_MEV_d",
+	"B_Heli_Transport_01_F",
+	
+	"RHS_A10",
+	"B_Plane_CAS_01_dynamicLoadout_F",
+	"RHS_AN2_B",
+	"RHS_C130J",
+	"C_Plane_Civil_01_F",
+	"C_Plane_Civil_01_racing_F",
+	"B_Plane_Fighter_01_F",
+	"I_Plane_Fighter_04_F",
+	"rhssaf_airforce_l_18",
+	"RHS_L39_cdf_b_cdf",
+	"RHS_l159_cdf_b_CDF",
+	"RHSGREF_cdf_b_su25",
+	"B_UAV_02_dynamicLoadout_f",
+	
+	"B_APC_Wheeled_01_cannon_F",
+	"B_APC_Tracked_01_AA_F",
+	"O_T_APC_Tracked_02_cannon_ghex_F",
+	"rhs_bmp2d_msv",
+	"rhsusf_CGRCAT1A2_usmc_d",
+	"rhsusf_CGRCAT1A2_Mk19_usmc_d",
+	"rhsusf_CGRCAT1A2_M2_usmc_d",
+	"I_MRAP_03_hmg_F",
+	"I_MRAP_03_gmg_F",
+	"I_APC_tracked_03_cannon_F",
+	"rhs_tigr_vdv",
+	"rhs_tigr_sts_vdv",
+	"rhs_tigr_m_vdv",
+	"O_MRAP_02_F",
+	"O_MRAP_02_gmg_F",
+	"O_MRAP_02_hmg_F",
+	"I_MBT_03_cannon_F",
+	"B_MRAP_01_F",
+	"B_MRAP_01_gmg_F",
+	"B_MRAP_01_hmg_F",
+	"rhsusf_m1045_d",
+	"rhsusf_M1078A1R_SOV_M2_D_fmtv_socom",
+	"rhsusf_M1084A1R_SOV_M2_D_fmtv_socom",
+	"rhsusf_m109d_usarmy",
+	"rhsusf_m113d_usarmy_supply",
+	"rhsusf_m113d_usarmy",
+	"rhsusf_m113d_usarmy_M240",
+	"rhsusf_m113d_usarmy_medical",
+	"rhsusf_m113d_usarmy_MK19",
+	"rhsusf_m113d_usarmy_unarmed",
+	"rhsusf_stryker_m1126_m2_wd",
+	"rhsusf_M1117_D",
+	"rhsusf_M1220_usarmy_d",
+	"rhsusf_M1220_M153_M2_usarmy_d",
+	"rhsusf_M1220_M2_usarmy_d",
+	"rhsusf_M1220_MK19_usarmy_d",
+	"rhsusf_M1220_M153_MK19_usarmy_d",
+	"rhsusf_M1230_M2_usarmy_d",
+	"rhsusf_M1230_MK19_usarmy_d",
+	"rhsusf_M1232_usarmy_d",
+	"rhsusf_M1232_M2_usarmy_d",
+	"rhsusf_M1232_MK19_usarmy_d",
+	"rhsusf_M1237_M2_usarmy_d",
+	"rhsusf_M1237_MK19_usarmy_d",
+	"rhsusf_M1238A1_socom_d",
+	"rhsusf_M1238A1_M2_socom_d",
+	"rhsusf_M1238A1_Mk19_socom_d",
+	"rhsusf_M1239_socom_d",
+	"rhsusf_M1239_M2_socom_d",
+	"rhsusf_M1239_M2_Deploy_socom_d",
+	"rhsusf_M1239_MK19_socom_d",
+	"rhsusf_M1239_MK19_Deploy_socom_d",
+	"rhsusf_M142_usarmy_D",
+	"rhsusf_m1a1aimd_usarmy",
+	"rhsusf_m1a1aim_tuski_d",
+	"rhsusf_m1a2sep1d_usarmy",
+	"rhsusf_m1a2sep1tuskid_usarmy",
+	"rhsusf_m1a2sep1tuskiid_usarmy",
+	"RHS_M2A2",
+	"RHS_M2A2_BUSKI",
+	"RHS_M2A3",
+	"RHS_M2A3_BUSKI",
+	"RHS_M2A3_BUSKIII",
+	"RHS_M6",
+	"I_C_Offroad_02_LMG_F",
+	"I_C_Offroad_02_AT_F",
+	"B_MBT_01_TUSK_F",
+	"B_MBT_01_cannon_F",
+	"B_APC_Tracked_01_rcws_F",
+	"B_APC_Tracked_01_CRV_F",
+	"B_G_Offroad_01_AT_F",
+	"O_APC_Wheeled_02_rcws_F",
+	"I_APC_Wheeled_03_cannon_F",
+	"rhsusf_rg33_usmc_d",
+	"rhsusf_rg33_m2_usmc_d",
+	"B_AFV_Wheeled_01_up_cannon_F",
+	"B_AFV_Wheeled_01_cannon_F",
+	"B_MBT_01_arty_F",
+	"rhs_t72bb_tv",
+	"I_LT_01_AT_F",
+	"I_LT_01_AA_F",
+	"I_LT_01_cannon_F",
+	"I_LT_01_scout_F"
 	};
 
 	class VehicleLimit {
-		Plane = 2;
-		Air = 1;
+		Plane = 1;
+		Air = 2;
 	};
 
 	// Used in "mpsf\functions\spawner\fn_createCarrier01.sqf" for spawning the carrier to support Vehicle Depots
-	class CarrierDepots {
+	/*class CarrierDepots {
 		class Elevator1 { // Starboard Bow - Clear, Open, West facing
 			position[] = {-33.1792,-8.6475,25.8617};
 			direction = 87;
@@ -241,7 +341,7 @@ class CfgVirtualDepot {
 			direction = 180;
 			classNames[] = {"LandVehicle","Helicopter"};
 		};
-	};
+	};*/
 
 	// Perfecting the Hardpoint locations of the aircraft. Not all Aircraft require this IF they are set-up properly.
 	// If not declared, a default position will be used until specified.
