@@ -6,9 +6,9 @@ class CfgMissionFramework {
 	enableLog = 1;
 	// Mission Admin - Credit to Mackenzieexd from TaskForce72 for UID filter Idea
 	AdminUIDs[] = {
-		"_SP_PLAYER_"	/* SP and Editor Debug */
-		,"_MP_CANKICK_"	/* ServerCommandAvailable #kick */
-		,"00000000000"	/* example Player UID "getPlayerUID" */
+	"76561198142692277",
+	"76561198117073327",
+	"76561198048254349"
 	};
 	// Task Objects
 	intelDropTypes[] = {"Land_File1_F","Land_File2_F","Land_FilePhotos_F","Land_Map_F","Land_Notepad_F","Land_HandyCam_F","Land_MobilePhone_old_F","Land_MobilePhone_smart_F","Land_PortableLongRangeRadio_F","Land_Suitcase_F","Land_File_research_F","Land_Tablet_01_F","Land_Tablet_02_F"};

@@ -3,3 +3,5 @@ if !(isMultiplayer) then {
 	player allowDamage false;
 	player setCaptive false;
 };
+
+RHSDecalsOff = true;

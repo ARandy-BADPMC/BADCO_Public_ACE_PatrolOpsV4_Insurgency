@@ -8,7 +8,7 @@ respawn				= 3;
 respawnButton		= 1;
 respawnDelay		= 10;
 respawnVehicleDelay	= 10;
-respawnTemplates[] = {"ReviveMP","RespawnMP"};
+respawnTemplates[] = {"RespawnMP"};
 
 // Battlefield Clearance
 corpseManagerMode = 1;

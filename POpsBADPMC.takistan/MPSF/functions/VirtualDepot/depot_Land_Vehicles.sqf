@@ -8,7 +8,6 @@
 	"rhsusf_CGRCAT1A2_M2_usmc_d",
 	"I_MRAP_03_hmg_F",
 	"I_MRAP_03_gmg_F",
-	"I_APC_tracked_03_cannon_F",
 	"rhs_tigr_vdv",
 	"rhs_tigr_sts_vdv",
 	"rhs_tigr_m_vdv",

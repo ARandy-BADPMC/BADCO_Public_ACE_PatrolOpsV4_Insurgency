@@ -1,7 +1,7 @@
 // Temporary until SquadMod
 ["InitializePlayer",[player, true]] call BIS_fnc_dynamicGroups;
 call compile preprocessFileLineNumbers "MPSF\functions\BADCO_class_check.sqf"; 
-
+/*
 [] spawn {
 	disableSerialization;
 	waitUntil{ !isNull (findDisplay 46) };
@@ -20,7 +20,7 @@ call compile preprocessFileLineNumbers "MPSF\functions\BADCO_class_check.sqf";
 	_ctrlText ctrlCommit 0;
 	true;
 };
-
+*/
 _boxes = [box1,box2,box3];
 {_x addaction ["Arsenal", 
 	{[_this select 0, _this select 1] call ace_arsenal_fnc_openBox;},nil,0,true,false,"","",10];

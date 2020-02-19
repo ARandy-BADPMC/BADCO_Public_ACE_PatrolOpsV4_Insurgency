@@ -120,9 +120,7 @@ class CfgRespawnMP {
 	enabled = 1;
 	MHQLimit = 1;
 	MHQvehicles[] = {
-		"B_Truck_01_box_F","B_MRAP_01_F"
-		,"O_Truck_03_repair_F","O_MRAP_02_F"
-		,"I_Truck_02_box_F","I_MRAP_03_F"
+		"O_T_APC_Tracked_02_cannon_ghex_F"
 	};
 	class west {
 		respawn[] = {"Base","Group","Rallypoint","Countdown"}; // ,"Wave","Spectator","Trigger"
@@ -238,7 +236,6 @@ class CfgVirtualDepot {
 	"rhsusf_CGRCAT1A2_M2_usmc_d",
 	"I_MRAP_03_hmg_F",
 	"I_MRAP_03_gmg_F",
-	"I_APC_tracked_03_cannon_F",
 	"rhs_tigr_vdv",
 	"rhs_tigr_sts_vdv",
 	"rhs_tigr_m_vdv",

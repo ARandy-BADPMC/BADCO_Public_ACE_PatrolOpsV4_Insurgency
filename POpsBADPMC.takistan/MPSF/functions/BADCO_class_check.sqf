@@ -65,4 +65,6 @@ BADCO_role_check =
 			};
 		};
 	};
+	
+	_vehicle call BADCO_texture_applier;
 };
