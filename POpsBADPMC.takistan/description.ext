@@ -47,8 +47,10 @@ class Params {
 	#include "mpsf\params.hpp"
 };
 
+#include "CHVD\dialog.hpp"
 class CfgFunctions {
 	#include "mpsf\cfgFunctions.hpp"
+	#include "CHVD\CfgFunctions.hpp"
 };
 
 class CfgNotifications {
