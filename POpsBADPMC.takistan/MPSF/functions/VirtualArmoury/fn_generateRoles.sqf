@@ -52,23 +52,54 @@ private _return = [];
 	private _sideID = getNumber (_cfg >> "side");
 	private _faction = getText (_cfg >> "faction");
 	private _role = switch (true) do {
+		case !(_className find "_sl_" < 0);
+		case !(_className find "_tl_" < 0) : {
+			"Squad Leader"
+		};
 		case !(_className find "_medic_" < 0) : {
 			"Medic"
+		};
+		case !(_className find "_gl_" < 0) : {
+			"Grenadier"
+		};
+		case !(_className find "_lat_" < 0);
+		case !(_className find "_aa_" < 0);
+		case !(_className find "_at_" < 0) : {
+			"Missile Specialist"
+		};
+		case !(_className find "_heavygunner_" < 0);
+		case !(_className find "_mg_" < 0);
+		case !(_className find "_ar_" < 0) : {
+			"Auto Rifleman"
+		};
+		case !(_className find "sharphooter" < 0);
+		case !(_className find "sharpshooter" < 0);
+		case !(_className find "_m_" < 0) : {
+			"Marksman"
+		};
+		case !(_className find "_exp_" < 0) : {
+			"Explosive Specialist"
 		};
 		case !(_className find "_repair_" < 0);
 		case !(_className find "_engineer_" < 0) : {
 			"Engineer"
 		};
+		case !(_className find "_diver_" < 0) : {
+			"Diver"
+		};
 		case !(_className find "heli" < 0);
 		case !(_className find "pilot" < 0) : {
 			"Pilot"
 		};
-		case !(_className find "jet" < 0);
-		case !(_className find "pilot" < 0) : {
-			"JetPilot"
+
+		case !(_className find "sniper" < 0);
+		case !(_className find "spotter" < 0);
+		case !(_className find "_ghillie_" < 0) : {
+			"Sniper"
 		};
-
-
+		case !(_className find "recon" < 0) : {
+			"Recon"
+		};
 		default {"Rifleman"};
 	};
 

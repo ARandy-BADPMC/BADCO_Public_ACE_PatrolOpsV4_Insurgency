@@ -3,6 +3,10 @@
 // Mission Configuration
 #include "configuration.hpp"
 
+// BIS Configuration
+allowFunctionsLog = 1; // Debug TODO: REMOVE FOR MP
+enableDebugConsole = 1; // Debug TODO: REMOVE FOR MP
+
 // Default to support MPSF RespawnMP
 respawn				= 3;
 respawnButton		= 1;
@@ -20,15 +24,6 @@ wreckLimit = 15;
 wreckRemovalMinTime = 60;
 wreckRemovalMaxTime = 120;
 minPlayerDistance = 500;
-
-//BADCO
-forceRotorLibSimulation = 0;							
-showGroupIndicator = 0;	
-enableTeamSwitch = 0;
-enableItemsDropping = 0;
-allowFunctionsLog = 0;				
-enableDebugConsole[] = {"76561198142692277","76561198117073327","76561198048254349"};
-ReviveMode = 0;
 
 // Header
 class Header {
