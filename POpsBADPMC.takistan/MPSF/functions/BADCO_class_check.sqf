@@ -9,14 +9,6 @@ BADCO_role_check =
 
 	if (_role == "Driver") then 
 	{
-		if (_vehicle isKindOf "UAV") then 
-		{
-			if (_unitType != "rhsusf_usmc_marpat_d_uav") then 
-			{
-				moveOut _unit;
-				if (true) exitWith {hint "You must be a UAV operator to use this"};		
-			};
-		};
 		if (_vehicle isKindOf "Plane") then 
 		{
 			if (_unitType != "rhsusf_airforce_jetpilot") then 
@@ -51,18 +43,6 @@ BADCO_role_check =
 				moveOut _unit;
 				if (true) exitWith {hint "You must be an engineer to drive this"};
 			};			
-		};
-	};
-
-	if (_role == "Turret") then 
-	{
-		if (_vehicle isKindOf "UAV") then 
-		{
-			if (_unitType != "rhsusf_usmc_marpat_d_uav") then 
-			{
-				moveOut _unit;
-				if (true) exitWith {hint "You must be a UAV operator to use this"};		
-			};
 		};
 	};
 	

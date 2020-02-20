@@ -12,5 +12,7 @@
 	"RHS_l159_cdf_b_CDF",
 	"RHSGREF_cdf_b_su25",
 	"B_UAV_02_dynamicLoadout_f",
-	"RHSGREF_A29B_HIDF"
+	"RHSGREF_A29B_HIDF",
+	"B_UAV_05_F",
+	"B_T_UAV_03_dynamicLoadout_F"
 ];
