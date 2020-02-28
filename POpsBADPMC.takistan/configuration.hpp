@@ -120,7 +120,7 @@ class CfgRespawnMP {
 	enabled = 1;
 	MHQLimit = 1;
 	MHQvehicles[] = {
-		"O_T_APC_Tracked_02_cannon_ghex_F"
+		"rhsusf_stryker_m1126_m2_wd"
 	};
 	class west {
 		respawn[] = {"Base","Group","Rallypoint","Countdown"}; // ,"Wave","Spectator","Trigger"

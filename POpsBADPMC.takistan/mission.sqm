@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=534;
+		nextID=538;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=12;
+		nextID=13;
 	};
 	class Camera
 	{
-		pos[]={5891.7891,212.55612,11794.515};
-		dir[]={0.40329298,-0.84056532,0.36174542};
-		up[]={0.62573028,0.54169852,0.5612666};
-		aside[]={0.66773647,7.9977326e-008,-0.74442977};
+		pos[]={5800.123,177.61838,11895.044};
+		dir[]={-0.38759136,-0.64007765,-0.66340095};
+		up[]={-0.32294354,0.7682246,-0.55275029};
+		aside[]={-0.86344492,5.7660509e-007,0.50446546};
 	};
 };
 binarizationWanted=0;
@@ -14325,7 +14325,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=135;
+		items=136;
 		class Item0
 		{
 			dataType="Marker";
@@ -19885,7 +19885,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5941.8198,89.163834,11852.021};
+				position[]={5940.0991,89.163834,11850.182};
 				angles[]={0,1.1007099,0};
 			};
 			side="Empty";
@@ -22632,7 +22632,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5660.0796,83.056129,11192.203};
-				angles[]={-0,3.6692753,0.001544081};
+				angles[]={0,3.6692753,0.001544081};
 			};
 			id=515;
 			type="ALiVE_sup_combatsupport";
@@ -23104,6 +23104,23 @@ class Mission
 				};
 				nAttributes=4;
 			};
+		};
+		class Item135
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5936.7769,84.783188,11854.215};
+				angles[]={0,4.2344542,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{this allowdamage false; this setObjectTexture [0, ""images\CBWelcome.paa""]}";
+			};
+			id=534;
+			type="Land_Billboard_F";
 		};
 	};
 	class Connections

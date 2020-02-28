@@ -5,3 +5,5 @@ if !(isMultiplayer) then {
 };
 
 RHSDecalsOff = true;
+
+[] execVM "Vcom\VcomInit.sqf";

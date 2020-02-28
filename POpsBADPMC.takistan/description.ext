@@ -51,6 +51,7 @@ class Params {
 class CfgFunctions {
 	#include "mpsf\cfgFunctions.hpp"
 	#include "CHVD\CfgFunctions.hpp"
+	#include "vcom\cfgFunctions.hpp"
 };
 
 class CfgNotifications {
