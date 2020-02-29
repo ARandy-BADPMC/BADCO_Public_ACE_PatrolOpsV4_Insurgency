@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=538;
+		nextID=540;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=13;
+		nextID=15;
 	};
 	class Camera
 	{
-		pos[]={5800.123,177.61838,11895.044};
-		dir[]={-0.38759136,-0.64007765,-0.66340095};
-		up[]={-0.32294354,0.7682246,-0.55275029};
-		aside[]={-0.86344492,5.7660509e-007,0.50446546};
+		pos[]={5916.0508,122.42828,11947.903};
+		dir[]={0.19918606,-0.49487099,-0.84585917};
+		up[]={0.11347866,0.8688429,-0.48190042};
+		aside[]={-0.97340083,6.4633787e-007,-0.22922184};
 	};
 };
 binarizationWanted=0;
@@ -80,13 +80,14 @@ addons[]=
 	"alive_mil_c2istar",
 	"alive_sup_combatsupport",
 	"alive_sup_transport",
-	"alive_sup_cas"
+	"alive_sup_cas",
+	"BadCo_Dependency"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=37;
+		items=38;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -329,12 +330,18 @@ class AddonsMetaData
 			name="alive_sup_cas";
 			author="ALiVE Mod Team";
 		};
+		class Item37
+		{
+			className="BadCo_Dependency";
+			name="Bad Co Dependency";
+			author="K.Hunter";
+			url="https://www.badcompanypmc.com";
+		};
 	};
 };
 randomSeed=14670951;
 class ScenarioData
 {
-	author="MadMan";
 	disabledAI=1;
 	class Header
 	{
@@ -14304,6 +14311,7 @@ class Mission
 {
 	class Intel
 	{
+		briefingName="BC Patrol Ops Takistan";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
@@ -14325,7 +14333,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=136;
+		items=137;
 		class Item0
 		{
 			dataType="Marker";
@@ -23121,6 +23129,23 @@ class Mission
 			};
 			id=534;
 			type="Land_Billboard_F";
+		};
+		class Item136
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5921.9668,90.867485,11876.567};
+				angles[]={0,5.8021498,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=538;
+			type="BadCo_Dependency";
+			atlOffset=0.00015258789;
 		};
 	};
 	class Connections
