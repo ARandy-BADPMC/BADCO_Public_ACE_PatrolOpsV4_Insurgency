@@ -2421,16 +2421,8 @@ _arsenalitems =
 "Vorona_HE",
 "Vorona_HEAT",
 
-"CMCSSC_MK17_CQC",
-"CMCSSC_MK17_CQC_EGLM",
-"CMCSSC_MK17_CQC_S",
-"CMCSSC_MK17_LB",
-"CMCSSC_MK17_STD",
-"CMCSSC_MK17_STD_EGLM",
-"CMCSSC_MK17_STD_S",
 "MK20_SSR",
 
-"CMCSSC_100Rnd_B_762x51_Ball",
 "20Rnd_762x51_Mag",
 
 "hlc_rifle_SG550",
@@ -2765,11 +2757,6 @@ _arsenalitems =
 "TRYK_Beard_Gr4",
 "TRYK_SBeard_BK5",
 "TRYK_U_denim_hood_nc",
-
-"UA_MM14_camo_rolled",
-"UA_MM14_camo",
-"UA_SOF_camo",
-"UA_SOF_camo_rolled",
 
 "hlc_optic_docterr",
 "hlc_optic_atacr",
