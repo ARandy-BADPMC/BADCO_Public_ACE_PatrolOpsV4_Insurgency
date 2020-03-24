@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=540;
+		nextID=565;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=15;
+		nextID=16;
 	};
 	class Camera
 	{
-		pos[]={5916.0508,122.42828,11947.903};
-		dir[]={0.19918606,-0.49487099,-0.84585917};
-		up[]={0.11347866,0.8688429,-0.48190042};
-		aside[]={-0.97340083,6.4633787e-007,-0.22922184};
+		pos[]={5933.5723,116.80706,11835.28};
+		dir[]={0.49308687,-0.83040988,0.25982189};
+		up[]={0.73475826,0.55697709,0.38716438};
+		aside[]={0.46622321,-1.5655532e-006,-0.88479006};
 	};
 };
 binarizationWanted=0;
@@ -14346,7 +14346,7 @@ class Mission
 		class Item1
 		{
 			dataType="Marker";
-			position[]={5955.417,83.040001,11862.633};
+			position[]={5954.9116,83.040001,11861.664};
 			name="respawn_west";
 			text="FOB Rasman Airfield";
 			type="b_hq";
@@ -14814,8 +14814,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5971.335,84.011673,11866.787};
-						angles[]={0,4.2809701,0};
+						position[]={5971.335,84.012077,11866.787};
+						angles[]={0,4.2809782,0};
 					};
 					side="Empty";
 					flags=4;
@@ -14826,6 +14826,7 @@ class Mission
 					};
 					id=153;
 					type="Land_Laptop_unfolded_F";
+					atlOffset=0.00040435791;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14847,7 +14848,26 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						class Attribute1
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
 					};
 				};
 				class Item12

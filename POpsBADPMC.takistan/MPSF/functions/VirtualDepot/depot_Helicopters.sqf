@@ -2,7 +2,6 @@
 	"RHS_AH1Z",
 	"RHS_AH64D",
 	"RHS_MELB_AH6M",
-	"I_Heli_Transport_02_F",
 	"I_Heli_light_03_dynamicLoadout_F",
 	"I_Heli_light_03_unarmed_F",
 	"RHS_CH_47F_10",
@@ -14,9 +13,11 @@
 	"C_Heli_Light_01_civil_F",
 	"B_Heli_Light_01_F",
 	"RHS_MELB_MH6M",
-	"RHS_Mi8AMTSh_vvs", 
-	"RHS_Mi24P_vdv",
-	"O_Heli_Transport_04_F", 
+	"O_Heli_Transport_04_ammo_F",
+	"O_Heli_Transport_04_bench_F",
+	"O_Heli_Transport_04_repair_F",
+	"O_Heli_Transport_04_medevac_F", 
+	"O_Heli_Transport_04_fuel_F",
 	"RHS_MELB_H6M",
 	"B_Heli_Attack_01_dynamicLoadout_F",
 	"RHS_UH1Y_d",
@@ -25,5 +26,6 @@
 	"RHS_UH60M_ESSS_d",
 	"RHS_UH60M2_d",
 	"RHS_UH60M_MEV_d",
-	"B_Heli_Transport_01_F"
+	"B_Heli_Transport_01_F",
+	"B_T_UAV_03_dynamicLoadout_F"
 ];
