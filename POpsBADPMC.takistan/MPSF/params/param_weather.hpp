@@ -1,7 +1,7 @@
 class ParamWeather {
 	title = "Mission Weather";
 	values[] = {0,1,2,3};
-	default = 1;
+	default = 0;
 	texts[]={"Clear","Cloudy","Rain","Thunderstorm"/*,"Cyclone","Snowing"*/};
 	function = "MPSF_Param_fnc_setMissionWeather";
 };

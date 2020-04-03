@@ -1,7 +1,7 @@
 class MPSFMissionLimit {
 	title = "Mission Limit on Operations";
 	values[] = {1,3,5,7,9,0};
-	default = 1;
+	default = 5;
 	texts[] = {"1 Op","3 Ops","5 Ops","7 Ops","9 Ops","Unlimited Ops"};
 	function = "MPSF_Param_fnc_setMissionLimit";
 };

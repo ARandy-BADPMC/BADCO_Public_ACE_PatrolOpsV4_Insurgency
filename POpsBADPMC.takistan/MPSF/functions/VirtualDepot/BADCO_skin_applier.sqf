@@ -49,4 +49,8 @@ switch _vehicleType do
 
 	default {};
 	};
+if (_vehicle isKindOf "AIR") then 
+	{
+		_vehicle enableCopilot false;
+	};
 };
