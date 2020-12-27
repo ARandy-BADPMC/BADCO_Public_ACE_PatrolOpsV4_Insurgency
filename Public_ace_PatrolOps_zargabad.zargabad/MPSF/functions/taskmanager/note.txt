@@ -1,0 +1,4 @@
+/*
+	BIS - https://community.bistudio.com/wiki/Arma_3_Task_Framework
+	BIS - https://community.bistudio.com/wiki/Arma_3_Task_Enhancements
+*/

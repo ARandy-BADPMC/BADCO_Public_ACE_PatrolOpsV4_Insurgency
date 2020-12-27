@@ -1,0 +1,139 @@
+class cfgmusic 
+{
+	sounds[]={};
+	class buzzer 
+		{
+		name="buzzer";
+		sound[]={"door_Buzzer.ogg",db+25,1,10};
+		titles[]={};
+		};
+};
+
+// Multiplayer Scripted Framework
+#include "mpsf\configuration.hpp"
+// Mission Configuration
+#include "configuration.hpp"
+
+// Default to support MPSF RespawnMP
+respawn				= 3;
+respawnButton		= 1;
+respawnDelay		= 10;
+respawnVehicleDelay	= 10;
+respawnTemplates[] = {"RespawnMP"};
+
+// Battlefield Clearance
+corpseManagerMode = 1;
+corpseLimit = 15;
+corpseRemovalMinTime = 60;
+corpseRemovalMaxTime = 120;
+wreckManagerMode = 1;
+wreckLimit = 15;
+wreckRemovalMinTime = 60;
+wreckRemovalMaxTime = 120;
+minPlayerDistance = 500;
+
+//BADCO
+forceRotorLibSimulation = 0;							
+showGroupIndicator = 0;	
+enableTeamSwitch = 0;
+enableItemsDropping = 0;
+allowFunctionsLog = 0;				
+enableDebugConsole[] = {"76561198142692277","76561198117073327","76561198048254349"};
+ReviveMode = 0;
+respawnOnStart = -1;
+
+// Header
+class Header {
+	gameType = Coop;
+	minPlayers = 1;
+	maxPlayers = 24;
+};
+
+class CfgRemoteExec {
+	class Functions {
+		class BIS_fnc_callscriptedeventhandler { jip = 0; }; // Required for MPSF
+	};
+};
+
+class Params {
+	#include "mpsf\params.hpp"
+};
+
+#include "CHVD\dialog.hpp"
+class CfgFunctions {
+	#include "mpsf\cfgFunctions.hpp"
+	#include "CHVD\CfgFunctions.hpp"
+};
+
+class CfgNotifications {
+	#include "mpsf\cfgNotifications.hpp"
+};
+
+class RscTitles {
+	#include "mpsf\RscTitle.hpp"
+};
+
+class CfgHints {
+	#include "mpsf\cfgHints.hpp"
+};
+
+class CfgRoles {
+	#include "mpsf\configuration\cfgRoles.hpp"
+};
+
+class CfgRespawnTemplates {
+	#include "mpsf\cfgRespawnTemplates.hpp"
+	};
+	
+class Extended_PreInit_EventHandlers
+{
+    aiSkillSettings="call compile preprocessFileLineNumbers 'AI.sqf'";
+	vehicleTextures="call compile preprocessFileLineNumbers 'MPSF\functions\VirtualDepot\BADCO_skin_applier.sqf'";
+	badcoDynamicSim="call compile preprocessFileLineNumbers 'enableDynamicSim.sqf'";
+};
+	
+class Extended_InitPost_EventHandlers
+{		
+		class CAManBase {		
+
+		class aiSetSkillDommiSettings {
+			
+			init = "(_this select 0) call AI_setSkill;[(_this select 0)] spawn badcoDynamicSimApply;";
+			
+		};
+	};
+		class LandVehicle {
+	
+		class carTextures {
+		
+			init = "_this select 0 call BADCO_texture_applier;[(_this select 0)] spawn badcoDynamicSimApply;";
+		
+		};
+	
+	};
+		class AIR {
+	
+		class airTextures {
+		
+			init = "_this select 0 call BADCO_texture_applier;[(_this select 0)] spawn badcoDynamicSimApply;";
+		
+		};
+	
+	};
+		class thing {		
+
+		class thingDynamicSimulation {
+			
+			init = "[(_this select 0)] spawn badcoDynamicSimApply;{_x addCuratorEditableObjects [[(_this select 0)],true];} forEach allCurators;";
+			
+		};
+	};
+		class static {		
+
+		class staticsDynamicSimulation {
+			
+			init = "[(_this select 0)] spawn badcoDynamicSimApply;{_x addCuratorEditableObjects [[(_this select 0)],true];} forEach allCurators;";
+			
+		};
+	};		
+};
