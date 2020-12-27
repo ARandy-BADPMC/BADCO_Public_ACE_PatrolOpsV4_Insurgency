@@ -1,9 +1,0 @@
-planned features PubPOps (in no order):
-
-- add Admin-Console
-- change Unit-types of players, civs and enemies - done for Takistan
-- add parameters (time of day,...?), edit existing ones, so there`s no conflict with ACE
-
--- create new missions
--- port to more maps
--- difficulty adjustments
