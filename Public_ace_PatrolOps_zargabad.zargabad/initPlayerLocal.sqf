@@ -32,7 +32,7 @@ _boxes = [box1,box2,box3];
 ["Player_onHandleRating_EH","onHandleRating",{ if (rating player <= 0) then { player addRating ((abs rating player)+1); }; }] call MPSF_fnc_addEventHandler;
 
 _uid = getPlayerUID player;
-_SOAR = ["76561198117073327"];//76561198080263934 -Geo2013 , 76561198142692277 -Alex. K., 76561198086630094 -G.Drunken, 76561198027293421- S.Werben, 76561198117073327 - A.Randy,   76561198059583284 - Vittex?, 76561198067590754 - Mas Pater, "76561198129876850" - Dehumanized
+_SOAR = ["76561198117073327","76561198142692277","76561198059583284","76561198067590754","76561198067590754"];//76561198142692277 -Alex. K., 76561198117073327 - A.Randy,   76561198059583284 - Vittex?, 76561198067590754 - Mas Pater, "76561198129876850" - Dehumanized
 if (_uid in _soar) then {player setVariable ["SOAR",1]};
 player addEventHandler ["GetInMan",{[_this select 0,_this select 1, _this select 2] call BADCO_role_check;}];
 if (typeof player == "rhsusf_usmc_marpat_d_uav" || typeOf player == "rhsusf_airforce_jetpilot") then 

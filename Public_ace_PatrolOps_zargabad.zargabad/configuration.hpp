@@ -186,12 +186,7 @@ class CfgVirtualDepot {
 	// Force this classname to appear as a distinct vehicle, useful for splitting up models and classnames
 	forceInDepot[] = {
 
-	"RHS_MELB_AH6M",
-	"I_Heli_light_03_dynamicLoadout_F",
 	"I_Heli_light_03_unarmed_F",
-	"RHS_CH_47F_10",
-	"rhsusf_CH53E_USMC_D",
-	"O_Heli_Light_02_dynamicLoadout_F",
 	"O_Heli_Light_02_unarmed_F",
 	"RHS_MELB_MH6M",
 	"O_Heli_Transport_04_ammo_F",
@@ -203,7 +198,6 @@ class CfgVirtualDepot {
 	"RHS_UH1Y_d",
 	"RHS_UH1Y_UNARMED_d",
 	"RHS_UH60M_d",
-	"RHS_UH60M_ESSS_d",
 	"RHS_UH60M2_d",
 	"RHS_UH60M_MEV_d",
 	
