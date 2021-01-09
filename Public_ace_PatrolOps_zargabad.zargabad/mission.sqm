@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4950.4009,37.681858,5795.0029};
-		dir[]={0.27342623,-0.96169245,-0.023465071};
-		up[]={0.95811117,0.27429625,-0.082223333};
-		aside[]={-0.085508391,-4.7116191e-006,-0.99642301};
+		pos[]={5182.2236,30.186304,6058.7319};
+		dir[]={-0.13128935,-0.98560101,-0.10679224};
+		up[]={-0.76458371,0.16915767,-0.62192041};
+		aside[]={-0.63103211,4.995527e-007,0.77578712};
 	};
 };
 binarizationWanted=0;
@@ -12300,7 +12300,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=3.5108299;
+														value=5;
 													};
 												};
 												class Item1
@@ -12345,7 +12345,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=4.4613199;
+														value=5;
 													};
 												};
 												class Item1
@@ -14689,11 +14689,11 @@ class Mission
 	class Intel
 	{
 		briefingName="BC InsOps";
-		overviewText="Patrol Zargabad";
+		overviewText="BC Insurgency Ops";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
-		startWeather=0.25;
+		startWeather=0;
 		startWind=0.1;
 		startWaves=0.1;
 		forecastWeather=0;
@@ -14704,9 +14704,9 @@ class Mission
 		windForced=1;
 		year=2009;
 		day=29;
-		hour=8;
-		minute=0;
-		startFogDecay=0.014;
+		hour=4;
+		minute=15;
+		startFogDecay=0.0099999998;
 		forecastFogDecay=0.014;
 	};
 	class Entities
