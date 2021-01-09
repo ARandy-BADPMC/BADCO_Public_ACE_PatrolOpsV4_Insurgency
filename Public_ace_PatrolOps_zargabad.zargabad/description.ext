@@ -102,6 +102,13 @@ class Extended_InitPost_EventHandlers
 			
 		};
 	};
+	
+		class Civilian {		
+		
+			init = "if ((random 1) < 0.5) then {[_this select 0,""nearbyEncounters""] call (missionNamespace getVariable [""MPSF_fnc_addConversation"",{}]);};";
+			
+		};
+		
 		class LandVehicle {
 	
 		class carTextures {
@@ -136,4 +143,17 @@ class Extended_InitPost_EventHandlers
 			
 		};
 	};		
+};
+
+class CfgDebriefing
+{  
+	class ACRE_disabled
+	{
+		title = "ACRE not working";
+		subtitle = "";
+		description = "You have been removed from the game because your ACRE is not working. It is a requirement to be on our TeamSpeak server (ts3.badcompanypmc.com) with your ACRE mod working to play on this server.";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
 };
