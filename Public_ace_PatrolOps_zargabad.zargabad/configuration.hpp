@@ -57,8 +57,8 @@ class CfgMissionTasks {
 		#include "tasks\encounter_INS_camp.hpp"
 		#include "tasks\encounter_INS_fuelStop.hpp"
 		#include "tasks\encounter_INS_guard.hpp"
-		#include "tasks\encounter_INS_patrol.hpp"
-		#include "tasks\encounter_INS_patrolTechnical.hpp"
+//		#include "tasks\encounter_INS_patrol.hpp"
+//		#include "tasks\encounter_INS_patrolTechnical.hpp"
 		#include "tasks\encounter_INS_squadTruck.hpp"
 
 	/* Operations */
@@ -186,6 +186,7 @@ class CfgVirtualDepot {
 	// Force this classname to appear as a distinct vehicle, useful for splitting up models and classnames
 	forceInDepot[] = {
 
+	"RHS_MELB_AH6M",
 	"I_Heli_light_03_unarmed_F",
 	"O_Heli_Light_02_unarmed_F",
 	"RHS_MELB_MH6M",
