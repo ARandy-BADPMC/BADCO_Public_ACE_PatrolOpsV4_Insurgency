@@ -186,6 +186,7 @@ class CfgVirtualDepot {
 	// Force this classname to appear as a distinct vehicle, useful for splitting up models and classnames
 	forceInDepot[] = {
 
+	"RHS_MELB_AH6M",
 	"I_Heli_light_03_unarmed_F",
 	"O_Heli_Light_02_unarmed_F",
 	"RHS_MELB_MH6M",
