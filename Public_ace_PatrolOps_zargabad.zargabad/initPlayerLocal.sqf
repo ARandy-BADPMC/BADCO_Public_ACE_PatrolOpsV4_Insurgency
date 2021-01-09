@@ -46,6 +46,16 @@ if (typeof player == "rhsusf_usmc_marpat_d_uav" || typeOf player == "rhsusf_airf
 	};
 };
 
+removeAllWeapons player;
+removeVest player;
+removeBackpack player;
+removeHeadgear player;
+removeGoggles player;
+arsenal_gate setVariable ['bis_disabled_Door_1',1,true];
+
+
+if (!isMultiplayer) exitWith {};
+
 _clanStatus = (squadparams player select 0) select 0;
 switch (_clanStatus) do {
 	case "B.A.D. PMC": {player setpos [5028.4,6098.36,0.157372];};
@@ -53,13 +63,6 @@ switch (_clanStatus) do {
 	default {}
 };
 if (name player == "Dehumanized") then {player setPos [5002.38,6099.9,0]; player forceAddUniform "U_C_WorkerCoveralls";};
-
-removeAllWeapons player;
-removeVest player;
-removeBackpack player;
-removeHeadgear player;
-removeGoggles player;
-arsenal_gate setVariable ['bis_disabled_Door_1',1,true];
 
 [] spawn {
 	sleep 10;	
