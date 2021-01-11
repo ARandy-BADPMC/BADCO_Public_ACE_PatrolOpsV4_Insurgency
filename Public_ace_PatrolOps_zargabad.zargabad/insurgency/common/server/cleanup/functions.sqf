@@ -2,8 +2,7 @@ aiDespawn = {
 	private ["_var","_plrs","_pos"];
 	
 	{
-		_isAuxAI = _x getVariable ["auxAI", false];
-		if (!_isAuxAI && {!isPlayer _x} && {(typeof _x) in eastInfClasses}) then {
+		if (((group _x) getVariable ["insAI", false]) && {!isPlayer _x} && {(typeof _x) in eastInfClasses}) then {
 			if alive _x then {
 				_pos = getpos _x;
 				_plrs = playableUnits apply {if ((_x distance2D _pos) > (SPAWNRANGE+200)) then {objNull} else {_x}};

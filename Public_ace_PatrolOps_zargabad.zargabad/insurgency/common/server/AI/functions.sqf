@@ -28,7 +28,6 @@ spawnAIVehicle = {
 	_vcl setDir getDir _obj;
 	
 	_ai = _grp createUnit [vclCrewClass, _pos, [], 100, "None"];
-	_ai setVariable ["auxAI", true];
 	_ai setRank (eastRanks select 2); 
 	_ai setSkill (aiSkill/10);
 	_ai setSkill ["spotDistance",1];	
@@ -39,7 +38,6 @@ spawnAIVehicle = {
 				
 		{
 			_ai = _grp createUnit [vclCrewClass, _pos, [], 100, "None"];
-			_ai setVariable ["auxAI", true];		
 			_ai setRank (eastRanks select 4); 
 			_ai setSkill (aiSkill/10);
 			_ai moveInTurret [_vcl, _x];
@@ -49,8 +47,7 @@ spawnAIVehicle = {
 		_cargoSeats = _vcl emptyPositions "Cargo";
 		if (_cargoSeats > 0) then {
 			for "_i" from 1 to _cargoSeats do {
-				_ai = _grp createUnit [vclCrewClass, _pos, [], 100, "None"];
-				_ai setVariable ["auxAI", true];		
+				_ai = _grp createUnit [vclCrewClass, _pos, [], 100, "None"];	
 				_ai setRank (eastRanks select 4); 
 				_ai setSkill (aiSkill/10);
 				_ai moveInCargo _vcl;
@@ -64,7 +61,6 @@ spawnAIVehicle = {
 	
 	{
 		_ai = _grp createUnit [vclCrewClass, _pos, [], 100, "None"];
-		_ai setVariable ["auxAI", true];		
 		_ai setRank (eastRanks select 0);
 		_ai setSkill (aiSkill/10);
 		_ai setSkill ["spotDistance",1];	
@@ -165,7 +161,6 @@ createRoofGun = {
 	};		
 	_grp = ["static","Grp",str _gCount,"east"] call getGroup; 
 	_ai  = _grp createUnit [staticClass, spawnPos, [], 100, "NONE"];	
-	_ai setVariable ["auxAI", true];
 	_ai assignAsGunner _gun; 
 	_ai moveInGunner _gun;	
 	_grp setFormDir _dir;

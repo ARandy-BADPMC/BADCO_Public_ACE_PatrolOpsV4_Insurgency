@@ -207,9 +207,9 @@ getGroup = {
 		_prefix = "";
 	};
 	
-	call compile format["
-		if isNil ""%1%2%3"" exitWith { %1%2%3 = createGroup %4; %1%2%3 };
-		if isNull %1%2%3 exitWith { %1%2%3 = createGroup %4; %1%2%3 }; 
+	call compile format ["
+		if isNil ""%1%2%3"" exitWith { %1%2%3 = createGroup %4; %1%2%3 setVariable [""insAI"", true, true]; %1%2%3 };
+		if isNull %1%2%3 exitWith { %1%2%3 = createGroup %4; %1%2%3 setVariable [""insAI"", true, true]; %1%2%3 }; 
 		%1%2%3
 	", _prefix, _name, _suffix, _side]; 
 }; 
