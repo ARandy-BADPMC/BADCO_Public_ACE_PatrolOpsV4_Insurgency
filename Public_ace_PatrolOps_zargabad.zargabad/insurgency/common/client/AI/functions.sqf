@@ -147,14 +147,6 @@ fillHouseEast = {
 			_ai addMagazine (IEDList select (random (count IEDList - 1)));
 			_ai addMagazine (IEDList select (random (count IEDList - 1)));
 			_ai setSkill _skill;
-			_ai addEventHandler ["killed", {
-				if (!isNull (_this select 0)) then {
-					if (random 100 > 90 || DEBUG) then {
-						_case = createVehicle ["suitcase", spawnPos, [], 100, "None"];	
-						_case setPosATL getPosATL (_this select 0);
-					};
-				};
-			}];
 			_process = true;
 		};
 		sleep 0.5;
