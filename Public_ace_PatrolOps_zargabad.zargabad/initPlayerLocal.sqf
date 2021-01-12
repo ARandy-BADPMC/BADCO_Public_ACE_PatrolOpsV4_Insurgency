@@ -70,3 +70,6 @@ if (name player == "Dehumanized") then {player setPos [5002.38,6099.9,0]; player
 		endMission "ACRE_disabled";
 	};
 };
+
+["addAction",[missionLaptop]] call PO4_fnc_operations;
+[missionLaptop,"Mission Operations"] call MPSF_fnc_createIntelBeacon;
