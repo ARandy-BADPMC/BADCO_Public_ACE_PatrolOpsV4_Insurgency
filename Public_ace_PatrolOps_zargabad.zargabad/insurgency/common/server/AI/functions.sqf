@@ -159,12 +159,14 @@ createRoofGun = {
 			};
 		};
 	};		
-	_grp = ["static","Grp",str _gCount,"east"] call getGroup; 
+	//_grp = ["static","Grp",str _gCount,"east"] call getGroup; 
+	_grp = createGroup east;
 	_ai  = _grp createUnit [staticClass, spawnPos, [], 100, "NONE"];	
 	_ai assignAsGunner _gun; 
 	_ai moveInGunner _gun;	
 	_grp setFormDir _dir;
 	_ai setSkill (aiSkill/10);
 	_ai setSkill ["spotDistance",1];
+	_grp deleteGroupWhenEmpty true;
 	if DEBUG then { [_house, _ai] call createDebugMarker; };  		
 }; 
