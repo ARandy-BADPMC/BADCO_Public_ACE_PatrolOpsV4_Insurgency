@@ -71,5 +71,6 @@ if (name player == "Dehumanized") then {player setPos [5002.38,6099.9,0]; player
 	};
 };
 
-["addAction",[missionLaptop]] call PO4_fnc_operations;
-[missionLaptop,"Mission Operations"] call MPSF_fnc_createIntelBeacon;
+// Workaround for laptop action not being added for JIP...
+["addAction",[BIS_laptop1]] call PO4_fnc_operations;
+[BIS_laptop1,"Mission Operations"] call MPSF_fnc_createIntelBeacon;
