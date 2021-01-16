@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=43;
+		nextID=44;
 	};
 	class Camera
 	{
-		pos[]={5182.2236,30.186304,6058.7319};
-		dir[]={-0.13128935,-0.98560101,-0.10679224};
-		up[]={-0.76458371,0.16915767,-0.62192041};
-		aside[]={-0.63103211,4.995527e-007,0.77578712};
+		pos[]={5210.8872,55.121906,5641.1509};
+		dir[]={0.31279778,-0.5760991,-0.75516981};
+		up[]={0.2204625,0.81737721,-0.53224987};
+		aside[]={-0.92388767,9.7497832e-009,-0.38268319};
 	};
 };
 binarizationWanted=0;
@@ -74342,7 +74342,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4958.4258,30.711895,6182.5708};
+				position[]={4958.4253,30.711693,6182.5708};
 				angles[]={0,1.59839,0};
 			};
 			side="Empty";
@@ -74352,7 +74352,7 @@ class Mission
 			};
 			id=2565;
 			type="B_supplyCrate_F";
-			atlOffset=0.25020027;
+			atlOffset=0.25;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -74374,7 +74374,26 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item1287
@@ -74382,7 +74401,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4958.1206,30.707367,6154.9219};
+				position[]={4958.1211,30.707685,6154.9219};
 				angles[]={0,1.6478701,0};
 			};
 			side="Empty";
@@ -74393,7 +74412,7 @@ class Mission
 			};
 			id=2566;
 			type="B_supplyCrate_F";
-			atlOffset=0.015602112;
+			atlOffset=0.015920639;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -74415,7 +74434,26 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item1288
@@ -74423,7 +74461,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4958.3906,30.543879,6168.1338};
+				position[]={4958.3911,30.544029,6168.1338};
 				angles[]={0,1.5912865,0};
 			};
 			side="Empty";
@@ -74433,7 +74471,7 @@ class Mission
 			};
 			id=2567;
 			type="B_supplyCrate_F";
-			atlOffset=0.25085068;
+			atlOffset=0.25099945;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -74455,7 +74493,26 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item1289
