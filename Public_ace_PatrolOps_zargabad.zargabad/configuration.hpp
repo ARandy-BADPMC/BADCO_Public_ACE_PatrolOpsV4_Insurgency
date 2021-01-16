@@ -123,9 +123,9 @@ class CfgRespawnMP {
 		"rhsusf_M1230a1_usarmy_d"
 	};
 	class west {
-		respawn[] = {"Base","Group","Rallypoint","Countdown"}; // ,"Wave","Spectator","Trigger"
+		respawn[] = {"Base","Rallypoint","Countdown"}; // ,"Wave","Spectator","Trigger"
 		respawnTimer = 30;
-		redeploy[] = {"Base","Group","Rallypoint"};
+		redeploy[] = {"Base","Rallypoint"};
 		redeployVehicles[] = {"Base"};
 		redeployDelay = 10;
 	};
