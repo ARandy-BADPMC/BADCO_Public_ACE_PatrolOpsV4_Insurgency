@@ -1,6 +1,4 @@
 [
-	"B_APC_Wheeled_01_cannon_F",
-	"B_APC_Tracked_01_AA_F",
 	"rhsusf_CGRCAT1A2_usmc_d",
 	"rhsusf_CGRCAT1A2_Mk19_usmc_d",
 	"rhsusf_CGRCAT1A2_M2_usmc_d",
@@ -24,6 +22,7 @@
 	"rhsusf_M1220_M2_usarmy_d",
 	"rhsusf_M1220_MK19_usarmy_d",
 	"rhsusf_M1220_M153_MK19_usarmy_d",
+	"rhsusf_M1230a1_usarmy_d",
 	"rhsusf_M1230_M2_usarmy_d",
 	"rhsusf_M1230_MK19_usarmy_d",
 	"rhsusf_M1232_usarmy_d",
@@ -39,12 +38,6 @@
 	"rhsusf_M1239_M2_Deploy_socom_d",
 	"rhsusf_M1239_MK19_socom_d",
 	"rhsusf_M1239_MK19_Deploy_socom_d",
-	"RHS_M2A2",
-	"RHS_M2A2_BUSKI",
-	"RHS_M2A3",
-	"RHS_M2A3_BUSKI",
-	"RHS_M2A3_BUSKIII",
-	"RHS_M6",
 	"I_C_Offroad_02_LMG_F",
 	"I_C_Offroad_02_AT_F",
 	"B_APC_Tracked_01_rcws_F",
@@ -52,10 +45,5 @@
 	"B_G_Offroad_01_AT_F",
 	"rhsusf_rg33_usmc_d",
 	"rhsusf_rg33_m2_usmc_d",
-	"B_AFV_Wheeled_01_up_cannon_F",
-	"B_AFV_Wheeled_01_cannon_F",
-	"I_LT_01_AT_F",
-	"I_LT_01_AA_F",
-	"I_LT_01_cannon_F",
 	"I_LT_01_scout_F"
 ];
