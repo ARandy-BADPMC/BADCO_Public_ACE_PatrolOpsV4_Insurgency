@@ -50,16 +50,16 @@ class CfgMissionTasks {
 	//	#include "tasks\event_0_responseCrashedVehicle.hpp"			// Crashed Vehicle (INTEL) -- Team in distress
 	//	#include "tasks\event_0_responseCrashedHelo.hpp"			// Crashed Helicopter (INTEL) -- Team in distress
 	// 1 - Random Encounters
-		#include "tasks\encounter_EN_jets.hpp"
-		#include "tasks\encounter_EN_manpads.hpp"
-		#include "tasks\encounter_EN_manpats.hpp"
-		#include "tasks\encounter_INS_attack.hpp"
+//		#include "tasks\encounter_EN_jets.hpp"
+//		#include "tasks\encounter_EN_manpads.hpp"//
+//		#include "tasks\encounter_EN_manpats.hpp"
+//		#include "tasks\encounter_INS_attack.hpp"
 		#include "tasks\encounter_INS_camp.hpp"
-		#include "tasks\encounter_INS_fuelStop.hpp"
-		#include "tasks\encounter_INS_guard.hpp"
+//		#include "tasks\encounter_INS_fuelStop.hpp"
+//		#include "tasks\encounter_INS_guard.hpp"
 //		#include "tasks\encounter_INS_patrol.hpp"
 //		#include "tasks\encounter_INS_patrolTechnical.hpp"
-		#include "tasks\encounter_INS_squadTruck.hpp"
+//		#include "tasks\encounter_INS_squadTruck.hpp"
 
 	/* Operations */
 	// 2 - Eliminate Target
@@ -88,7 +88,7 @@ class CfgMissionTasks {
 		#include "tasks\op_3_secureFactory.hpp"					// 3/5 - Tested - TODO: Update Description, Failed Vehicle Spawn, Refine Spawn Locations // - Factories
 		#include "tasks\op_3_secureHomestead.hpp"					// 5/5 - Tested - TODO: Update Description // - Houses
 		#include "tasks\op_3_secureRuin.hpp"						// 2/5 - Tested - TODO: Update Description, Failed Vehicle Spawn, Remove Vehicles, Refine Spawn Locations // - Ruins
-		#include "tasks\op_3_secureTown.hpp"						// 5/5 - Tested - TODO: Update Description // - Town
+//		#include "tasks\op_3_secureTown.hpp"						// 5/5 - Tested - TODO: Update Description // - Town
 		#include "tasks\op_3_secureVillage.hpp"					// 5/5 - Tested - TODO: Update Description // - Village
 
 	// 4 - Retrieve Intel > Ambush
