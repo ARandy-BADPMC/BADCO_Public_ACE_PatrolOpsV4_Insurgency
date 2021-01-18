@@ -2,7 +2,7 @@
 aiSkill = 4;
 
 // number of dynamically spawned AI units per player
-maxAIPerPlayer = 5;
+maxAIPerPlayer = 4;
 
 // min number of players needed to capture a grid
 playersNeeded = 1;
