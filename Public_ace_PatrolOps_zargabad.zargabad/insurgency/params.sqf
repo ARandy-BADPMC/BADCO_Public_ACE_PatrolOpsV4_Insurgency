@@ -1,6 +1,3 @@
-// the real skill level is this number divided by 10... could use some change...
-aiSkill = 4;
-
 // number of dynamically spawned AI units per player
 maxAIPerPlayer = 4;
 

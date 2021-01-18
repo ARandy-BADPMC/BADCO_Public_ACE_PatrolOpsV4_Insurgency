@@ -28,10 +28,7 @@ spawnAIVehicle = {
 	_vcl setDir getDir _obj;
 	
 	_ai = _grp createUnit [vclCrewClass, _pos, [], 100, "None"];
-	_ai setRank (eastRanks select 2); 
-	_ai setSkill (aiSkill/10);
-	_ai setSkill ["spotDistance",1];	
-	_ai setSkill ["spotTime",1];
+	_ai setRank (eastRanks select 2);
 	_ai moveInDriver _vcl;
 	
 	if (typeOf _vcl in withPassenger) then {
@@ -39,7 +36,6 @@ spawnAIVehicle = {
 		{
 			_ai = _grp createUnit [vclCrewClass, _pos, [], 100, "None"];
 			_ai setRank (eastRanks select 4); 
-			_ai setSkill (aiSkill/10);
 			_ai moveInTurret [_vcl, _x];
 		} foreach (allTurrets [_vcl, true]) - (allTurrets [_vcl, false]);
 		
@@ -48,8 +44,7 @@ spawnAIVehicle = {
 		if (_cargoSeats > 0) then {
 			for "_i" from 1 to _cargoSeats do {
 				_ai = _grp createUnit [vclCrewClass, _pos, [], 100, "None"];	
-				_ai setRank (eastRanks select 4); 
-				_ai setSkill (aiSkill/10);
+				_ai setRank (eastRanks select 4);
 				_ai moveInCargo _vcl;
 				sleep 0.05;
 			};
@@ -62,9 +57,6 @@ spawnAIVehicle = {
 	{
 		_ai = _grp createUnit [vclCrewClass, _pos, [], 100, "None"];
 		_ai setRank (eastRanks select 0);
-		_ai setSkill (aiSkill/10);
-		_ai setSkill ["spotDistance",1];	
-		_ai setSkill ["spotTime",1];	
 		_ai moveInTurret [_vcl, _x];
 	} foreach allTurrets [_vcl, false];
 
@@ -167,8 +159,6 @@ createRoofGun = {
 	_ai assignAsGunner _gun; 
 	_ai moveInGunner _gun;	
 	_grp setFormDir _dir;
-	_ai setSkill (aiSkill/10);
-	_ai setSkill ["spotDistance",1];
 	_grp deleteGroupWhenEmpty true;
 	if DEBUG then { [_house, _ai] call createDebugMarker; };  		
 }; 

@@ -142,11 +142,9 @@ fillHouseEast = {
 				_return 
 			}];
 			_ai setPosATL _pos;
-			_skill = aiSkill / 10;
 			doStop _ai;
 			_ai addMagazine (IEDList select (random (count IEDList - 1)));
 			_ai addMagazine (IEDList select (random (count IEDList - 1)));
-			_ai setSkill _skill;
 			_process = true;
 		};
 		sleep 0.5;
