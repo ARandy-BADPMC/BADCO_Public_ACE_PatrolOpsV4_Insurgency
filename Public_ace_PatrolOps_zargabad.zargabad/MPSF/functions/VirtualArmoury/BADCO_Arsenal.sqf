@@ -562,8 +562,6 @@ _arsenalitems =
 "ACE_5Rnd_127x99_AMAX_Mag",
 "ACE_5Rnd_127x99_API_Mag",
 "5Rnd_127x108_Mag",
-"150Rnd_556x45_Drum_Mag_Tracer_F",
-"150Rnd_556x45_Drum_Mag_F",
 "rhs_mag_9x19_17",
 "20Rnd_650x39_Cased_Mag_F",
 "200Rnd_556x45_Box_Tracer_F",
