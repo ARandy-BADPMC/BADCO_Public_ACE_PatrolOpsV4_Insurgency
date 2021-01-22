@@ -201,7 +201,7 @@ _moved=0;
 _damm=0; 
 _dammchg=0; 
 _lastdamm = 0; 
-curTimeontarget = 0; 
+_curTimeontarget = 0; 
 
 _fightmode = "walk"; 
 _fm=0; 
@@ -311,7 +311,7 @@ _suppressTimer = 0;
 while { _loop} do { 
 	sleep .01; 
 	// keep track of how long we've been moving towards a destination
-	curTimeontarget=curTimeontarget+_currcycle; 
+	_curTimeontarget=_curTimeontarget+_currcycle; 
 	_react=_react+_currcycle; 
 	
 	if ((count allplayers) == 0) then {
@@ -509,7 +509,7 @@ while { _loop} do {
 			
 			_react=0; 
 			_fightmode="fight"; 
-			curTimeontarget=0; 
+			_curTimeontarget=0; 
 			_fm=1; 
 			 if (KRON_UPS_Debug) then { 
 				"dead" setmarkerpos _hitPos; "avoid" setmarkerpos _avoidPos; "flank" setmarkerpos _flankPos; "target" setmarkerpos _attackPos; 
@@ -538,7 +538,7 @@ while { _loop} do {
 			_dammchg = abs(_damm - _lastdamm); 
 			
 			// we're either close enough, seem to be stuck, or are getting damaged, so find a new target 
-			if ((!_swimming) && ((_dist<=_closeenough) || (_totmove<.2) || (_dammchg>0.01) || (curTimeontarget>ALERTTIME))) then {
+			if ((!_swimming) && ((_dist<=_closeenough) || (_totmove<.2) || (_dammchg>0.01) || (_curTimeontarget>ALERTTIME))) then {
 			
 				_makenewtarget=true; 
 				// Hunter: try to get stuck ones moving again...
@@ -569,7 +569,7 @@ while { _loop} do {
 
 			// make new target
 			if (_makenewtarget) then { 
-				if ((_nomove=="NOMOVE") && (curTimeontarget>ALERTTIME)) then { 
+				if ((_nomove=="NOMOVE") && (_curTimeontarget>ALERTTIME)) then { 
 					if (([_currPos,_orgPos] call KRON_distancePosSqr)<_closeenough) then { 
 						_newpos = false; 
 					} else { 
@@ -629,7 +629,7 @@ while { _loop} do {
 		// tell unit about new target position
 		if (_fightmode!="walk") then { 
 			// reset patrol speed after following enemy for a while
-			if (curTimeontarget>ALERTTIME) then { 
+			if (_curTimeontarget>ALERTTIME) then { 
 				_fightmode="walk"; 
 				_speedmode = _orgSpeed; 
 				{ 
@@ -667,7 +667,7 @@ while { _loop} do {
 		_waiting=-1; 
 		_newpos=false; 
 		_swimming=false; 
-		curTimeontarget = 0; 
+		_curTimeontarget = 0; 
 	}; 
 
 	// move on
