@@ -25,16 +25,16 @@
 
 // how far opfors should move away if they're under attack
 // set this to 200-300, when using the script in open areas (rural surroundings)
-#define SAFEDIST 300
+#define SAFEDIST 150
 
 // how close unit has to be to target to generate a new one 
-#define CLOSEENOUGH 30
+#define CLOSEENOUGH 100
 
 // how close units have to be to each other to share information
-#define SHAREDIST 2000
+#define SHAREDIST (worldSize/8)
 
 // how long AI units should be in alert mode after initially spotting an enemy
-#define ALERTTIME 180
+#define ALERTTIME 300
 
 // bugfix value
 #define CENTERPOS			getArray (configFile >> "CfgWorlds" >> worldName >> "centerPosition")
@@ -128,9 +128,9 @@ KRON_UPS_Total = KRON_UPS_Total + (count _members);
 
 // what type of "vehicle" is unit ?
 _isman = _npc isKindOf "Man"; 
-_iscar = _npc isKindOf "vbs2_LandVehicles"; 
+_iscar = _npc isKindOf "LandVehicle"; 
 _isboat = _npc isKindOf "Ship"; 
-_isplane = _npc isKindOf "Air"; 
+_isair = _npc isKindOf "Air"; 
 
 // check to see whether group is an enemy of the player (for attack and avoidance maneuvers)
 // since countenemy doesn't count vehicles, and also only counts enemies if they're known, 
@@ -217,7 +217,7 @@ _sin270=-1; _cos270=0;
 
 // set target tolerance high for choppers & planes
 _closeenough=CLOSEENOUGH*CLOSEENOUGH; 
-if (_isplane) then { _closeenough=5000}; 
+if (_isair) then { _closeenough=5000}; 
 
 // ***************************************** optional arguments *****************************************
 
@@ -366,7 +366,11 @@ while { _loop} do {
 		// did the leader die?
 		if (!alive _npc) then { 
 			_npc = _members select 0; 
-			group _npc selectLeader _npc; 
+			group _npc selectLeader _npc;
+			_isman = _npc isKindOf "Man"; 
+			_iscar = _npc isKindOf "LandVehicle"; 
+			_isboat = _npc isKindOf "Ship"; 
+			_isair = _npc isKindOf "Air"; 			
 			if (isPlayer _npc) then { _exit=true}; 
 		}; 
 	}; 
@@ -428,7 +432,7 @@ while { _loop} do {
                         } forEach crew _npc;
                         };
                         
-                        if (_isplane) then {
+                        if (_isair) then {
 													_paradroppers = [];
 													{
 														_role = assignedVehicleRole _x;
@@ -590,7 +594,7 @@ while { _loop} do {
 						if (isNil "_posX" || isNil "_posY") then { _targetPos = CENTERPOS; };
 						_roadlist = _targetPos nearRoads 2000;
 						if (count _roadlist>0) exitWith { _targetPos = getPosATL (_roadlist select 0); };
-						//_road=[_targetPos,(_isplane||_isboat),_road] call KRON_OnRoad; 
+						//_road=[_targetPos,(_isair||_isboat),_road] call KRON_OnRoad; 
 						sleep .01; 			
 					}; 
 				}; 
