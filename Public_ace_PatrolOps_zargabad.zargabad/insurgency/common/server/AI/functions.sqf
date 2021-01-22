@@ -71,7 +71,7 @@ spawnAIVehicle = {
 	_grp deleteGroupWhenEmpty true;
 	sleep 1;
 	cleanupVics pushBack _vcl;
-	[leader _grp, _mkr, _speed, "nowait", _track] execVM "insurgency\common\server\AI\UPS.sqf";
+	[_vcl, _mkr, _speed, "nowait", _track] execVM "insurgency\common\server\AI\UPS.sqf";
 };
 
 spawnAIVehicles = { 
