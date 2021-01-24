@@ -126,10 +126,10 @@ createRoofGun = {
 	_dummy setDir _dir;
 	_dummy setPosATL (_pos vectorAdd [0,0,2]);
 	uiSleep 3;
-	_dummypos = getPosATL _dummy;	
-	_dummy setPosATL (_dummypos vectorAdd [0,0,0.03]);
+	//_dummypos = getPosATL _dummy;	
+	//_dummy setPosATL (_dummypos vectorAdd [0,0,0.03]);
 	_dummy setVectorUp [0,0,1];
-	uisleep 1;
+	uisleep 3;
 	_gun attachto [_dummy, [0,0,1.5]]; 		
 	_dirOffset = -(getDir _dummy);
 	private _maxAngle = getnumber (configfile >> "cfgvehicles" >> (typeof _gun) >> "Turrets" >> "MainTurret" >> "maxTurn");

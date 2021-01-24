@@ -128,9 +128,13 @@ KRON_UPS_Total = KRON_UPS_Total + (count _members);
 
 // what type of "vehicle" is unit ?
 _isman = _npc isKindOf "Man"; 
-_iscar = _npc isKindOf "LandVehicle"; 
+_isLandVehicle = _npc isKindOf "LandVehicle"; 
 _isboat = _npc isKindOf "Ship"; 
 _isair = _npc isKindOf "Air"; 
+
+if (_isLandVehicle) then {
+	_npc setUnloadInCombat [true, true];
+};
 
 // check to see whether group is an enemy of the player (for attack and avoidance maneuvers)
 // since countenemy doesn't count vehicles, and also only counts enemies if they're known, 
@@ -368,7 +372,7 @@ while { _loop} do {
 			_npc = _members select 0; 
 			group _npc selectLeader _npc;
 			_isman = _npc isKindOf "Man"; 
-			_iscar = _npc isKindOf "LandVehicle"; 
+			_isLandVehicle = _npc isKindOf "LandVehicle"; 
 			_isboat = _npc isKindOf "Ship"; 
 			_isair = _npc isKindOf "Air"; 			
 			if (isPlayer _npc) then { _exit=true}; 
@@ -425,23 +429,28 @@ while { _loop} do {
 				_x enableAI "autotarget";
 			} foreach _members;
                         
-                        if (_iscar) then {
-                            //Hunter'z: unload passengers
-                         if (typeOf _npc in noGunVehicles) then {doGetOut driver _npc};                           
-                        {if ((_x != driver _npc) && (_x != gunner _npc) && (_x != commander _npc)) then {doGetOut _x;};
-                        } forEach crew _npc;
-                        };
+			if (_isLandVehicle) then {
+				//unload passengers
+				if (typeOf _npc in noGunVehicles) then {
+					doGetOut driver _npc;
+				};                           
+				{
+					if ((_x != driver _npc) && {_x != gunner _npc} && {_x != commander _npc}) then {
+						doGetOut _x;
+					};
+				} forEach crew _npc;
+			};
                         
-                        if (_isair) then {
-													_paradroppers = [];
-													{
-														_role = assignedVehicleRole _x;
-														if (((count _role) > 0) && {(_role select 0) == "Cargo"}) then {_paradroppers pushBack _x;};
-													} forEach crew _npc;
-													if ((count _paradroppers) > 0) then {
-														[_npc,100,_paradroppers] spawn paraEject;
-													};
-                        };
+			if (_isair) then {
+			_paradroppers = [];
+			{
+			_role = assignedVehicleRole _x;
+			if (((count _role) > 0) && {(_role select 0) == "Cargo"}) then {_paradroppers pushBack _x;};
+			} forEach crew _npc;
+			if ((count _paradroppers) > 0) then {
+			[_npc,100,_paradroppers] spawn paraEject;
+			};
+			};
                         
 			_pursue=true; 
 			// make the exactness of the target dependent on the knowledge about the shooter
