@@ -103,9 +103,10 @@ class Extended_InitPost_EventHandlers
 		};
 	};
 	
+		
 		class Civilian {		
 		
-			init = "if ((random 1) < 0.5) then {[_this select 0,""nearbyEncounters""] call (missionNamespace getVariable [""MPSF_fnc_addConversation"",{}]);};";
+			init = "if ((local (_this select 0)) && {(random 1) < 0.5}) then {[_this select 0,""nearbyEncounters""] call (missionNamespace getVariable [""MPSF_fnc_addConversation"",{}]);};";
 			
 		};
 		
