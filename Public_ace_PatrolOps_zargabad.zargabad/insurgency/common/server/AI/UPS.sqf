@@ -134,6 +134,8 @@ _isair = _npc isKindOf "Air";
 
 if (_isLandVehicle) then {
 	_npc setUnloadInCombat [true, true];
+} else {
+	_npc setUnloadInCombat [false, false];
 };
 
 // check to see whether group is an enemy of the player (for attack and avoidance maneuvers)
@@ -442,14 +444,14 @@ while { _loop} do {
 			};
                         
 			if (_isair) then {
-			_paradroppers = [];
-			{
-			_role = assignedVehicleRole _x;
-			if (((count _role) > 0) && {(_role select 0) == "Cargo"}) then {_paradroppers pushBack _x;};
-			} forEach crew _npc;
-			if ((count _paradroppers) > 0) then {
-			[_npc,100,_paradroppers] spawn paraEject;
-			};
+				_paradroppers = [];
+				{
+					_role = assignedVehicleRole _x;
+					if (((count _role) > 0) && {(_role select 0) == "Cargo"}) then {_paradroppers pushBack _x;};
+				} forEach crew _npc;
+				if ((count _paradroppers) > 0) then {
+					[_npc,100,_paradroppers] spawn paraEject;
+				};
 			};
                         
 			_pursue=true; 
