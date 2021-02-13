@@ -294,7 +294,8 @@ switch (_mode) do {
 			,105
 		] spawn {sleep (0.3 + random 3); _this call MPSF_fnc_addAction};
 
-		["addIntelBeacon",[_NPC,"","\A3\ui_f\data\IGUI\Cfg\Actions\talk_ca.paa"]] call (missionNamespace getVariable ["MPSF_fnc_intel",{}]);
+			// Hunter: No need for beacons...			
+		//["addIntelBeacon",[_NPC,"","\A3\ui_f\data\IGUI\Cfg\Actions\talk_ca.paa"]] call (missionNamespace getVariable ["MPSF_fnc_intel",{}]);
 
 		_NPC allowFleeing 0;
 

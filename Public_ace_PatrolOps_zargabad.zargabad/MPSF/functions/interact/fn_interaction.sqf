@@ -195,7 +195,8 @@ switch (_mode) do {
 				}] call MPSF_fnc_addEventHandler;
 			};*/
 			// Replace body with BodyBag (LAWS DLC)
-			[] call MPSF_fnc_actionBodyBag;
+			// Hunter: remove -- makes ACE body bags redundant
+			//[] call MPSF_fnc_actionBodyBag;
 			// INTEL Body Searching
 			[] call MPSF_fnc_actionBodySearch;
 			// Vehicle Doors

@@ -178,7 +178,9 @@ switch (_mode) do {
 	};
 // Init
 	case "postInit" : {
-		["init"] spawn MPSF_fnc_civilianPopulation;
+		// Hunter: disable POPS civilians
+		//["init"] spawn MPSF_fnc_civilianPopulation;
+		
 		if (isServer) then {
 			["MPSF_Environment_onDatetimeChange_EH","onChangeDateTime",{
 				["onChangeDateTime",_this] call MPSF_fnc_environment;

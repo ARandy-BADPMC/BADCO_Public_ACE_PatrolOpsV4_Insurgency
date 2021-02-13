@@ -548,7 +548,8 @@ switch (_mode) do {
 		showChat (uiNamespace getVariable ["MPSF_RespawnMP_var_showChat",true]);
 		{inGameUISetEventHandler [_x, ""]} forEach ["PrevAction", "Action", "NextAction"];
 		// Remove Old Body
-		if !(isNull _oldUnit) then { deleteVehicle _oldUnit; };
+		// Hunter: no don't...
+		//if !(isNull _oldUnit) then { deleteVehicle _oldUnit; };
 
 		["closeUI"] call MPSF_fnc_respawnMP;
 

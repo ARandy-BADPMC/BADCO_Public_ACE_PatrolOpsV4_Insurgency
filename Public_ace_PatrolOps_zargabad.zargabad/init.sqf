@@ -9,3 +9,5 @@ if !(isMultiplayer) then {
 };
 
 RHSDecalsOff = true;
+
+[] execVM "insurgency\init.sqf";
