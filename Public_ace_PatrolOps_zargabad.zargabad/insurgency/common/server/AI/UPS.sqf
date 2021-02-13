@@ -1,3 +1,4 @@
+#include "..\defines.sqf"
 #define startLocation       (markerpos "respawn_west")
 // =========================================================================================================
 //  Urban Patrol Script  
