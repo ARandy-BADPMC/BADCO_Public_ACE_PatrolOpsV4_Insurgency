@@ -2838,7 +2838,31 @@ _arsenalitems =
 "rhs_acc_okp7_picatinny",
 "ACRE_SEM52SL",
 "ACRE_SEM70",
-"MiniGrenade"
+"MiniGrenade",
+"HLC_rifle_XM8_Carbine",
+"HLC_rifle_XM8_Carbine_GL",
+"HLC_rifle_XM8_Carbine_GL_Tan",
+"HLC_rifle_XM8_Carbine_Tan",
+"hlc_rifle_XM8_Compact",
+"HLC_rifle_XM8_Compact_Tan",
+"hlc_rifle_XM8_DMAR",
+"HLC_Rifle_XM8_MWSF_Carbine",
+"HLC_Rifle_XM8_MWSF_Carbine_GL",
+"HLC_Rifle_XM8_MWSF_Carbine_GL_Tan",
+"HLC_rifle_XM8_MWSF_Carbine_Tan",
+"hlc_rifle_XM8_MWSF_Compact",
+"HLC_Rifle_XM8_MWSF_Compact_Tan",
+"hlc_rifle_XM8_MWSF_DMAR",
+"HLC_Rifle_XM8_MWSF_DMAR_Tan",
+"rhs_weap_m14_ris_d",
+"hlc_optic_ism_pcap",
+"hlc_optic_amo_pcap",
+"hlc_optic_ism1400a7",
+"hlc_acc_vfg_pcap",
+"hlc_acc_vfg_pcap_tan",
+"hlc_acc_flashlight_pcap",
+"hlc_grip_pmvfg_black",
+"hlc_grip_afg2"
 ];
 
 
