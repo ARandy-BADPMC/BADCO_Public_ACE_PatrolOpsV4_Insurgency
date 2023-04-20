@@ -96,12 +96,20 @@ class Extended_InitPost_EventHandlers
 {		
 		class CAManBase {		
 
-		class aiSetSkillDommiSettings {
+		class aiSetSkill {
 			
 			init = "(_this select 0) call AI_setSkill;[(_this select 0)] spawn badcoDynamicSimApply;";
 			
 		};
 	};
+	
+		
+		class Civilian {		
+		
+			init = "if ((local (_this select 0)) && {(random 1) < 0.5}) then {[_this select 0,""nearbyEncounters""] call (missionNamespace getVariable [""MPSF_fnc_addConversation"",{}]);};";
+			
+		};
+		
 		class LandVehicle {
 	
 		class carTextures {
@@ -124,7 +132,7 @@ class Extended_InitPost_EventHandlers
 
 		class thingDynamicSimulation {
 			
-			init = "[(_this select 0)] spawn badcoDynamicSimApply;{_x addCuratorEditableObjects [[(_this select 0)],true];} forEach allCurators;";
+			init = "[(_this select 0)] spawn badcoDynamicSimApply;";
 			
 		};
 	};
@@ -132,8 +140,21 @@ class Extended_InitPost_EventHandlers
 
 		class staticsDynamicSimulation {
 			
-			init = "[(_this select 0)] spawn badcoDynamicSimApply;{_x addCuratorEditableObjects [[(_this select 0)],true];} forEach allCurators;";
+			init = "[(_this select 0)] spawn badcoDynamicSimApply;";
 			
 		};
 	};		
+};
+
+class CfgDebriefing
+{  
+	class ACRE_disabled
+	{
+		title = "ACRE not working";
+		subtitle = "";
+		description = "You have been removed from the game because your ACRE is not working. It is a requirement to be on our TeamSpeak server (ts3.badcompanypmc.com) with your ACRE mod working to play on this server.";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
 };

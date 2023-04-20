@@ -142,61 +142,61 @@ class Opfor_Altis {
 	side = 0;
 	class Groups {
 		class TargetHVT {
-			classNames[] = {"LOP_TKA_Infantry_TL"};
+			classNames[] = {"LOP_TKA_Infantry_Officer"};
 		};
 		class TargetHVT_INS {
 			classNames[] = {"LOP_AM_Infantry_SL"};
 		};
 		class Squad8 {
-			classNames[] = {"LOP_ISTS_Infantry_SL","LOP_ISTS_Infantry_Rifleman_3","LOP_ISTS_Infantry_AT","LOP_ISTS_Infantry_AR","LOP_ISTS_Infantry_Rifleman_5","LOP_ISTS_Infantry_GL","LOP_ISTS_Infantry_AR","LOP_ISTS_Infantry_Marksman"};
+			classNames[] = {"LOP_AM_OPF_Infantry_TL","LOP_AM_OPF_Infantry_Rifleman","LOP_AM_OPF_Infantry_AT","LOP_AM_OPF_Infantry_AR","LOP_AM_OPF_Infantry_Rifleman_5","LOP_AM_OPF_Infantry_GL","LOP_AM_OPF_Infantry_AR","LOP_AM_OPF_Infantry_Marksman"};
 		};
 		class Squad8_AA {
-			classNames[] = {"LOP_ISTS_Infantry_SL","LOP_ISTS_Infantry_Rifleman_3","LOP_TKA_Infantry_AA","LOP_ISTS_Infantry_Rifleman_3","LOP_ISTS_Infantry_Rifleman_5","LOP_ISTS_Infantry_GL","LOP_ISTS_Infantry_Corpsman","LOP_ISTS_Infantry_Marksman"};
+			classNames[] = {"LOP_AM_OPF_Infantry_TL","LOP_AM_OPF_Infantry_Rifleman","LOP_TKA_Infantry_AA","LOP_AM_OPF_Infantry_Rifleman","LOP_AM_OPF_Infantry_Rifleman_5","LOP_AM_OPF_Infantry_GL","LOP_AM_OPF_Infantry_Corpsman","LOP_AM_OPF_Infantry_Marksman"};
 		};
 		class Squad8_AR {
-			classNames[] = {"LOP_ISTS_Infantry_SL","LOP_ISTS_Infantry_Rifleman_3","LOP_ISTS_Infantry_AT","LOP_ISTS_Infantry_AR","LOP_ISTS_Infantry_Rifleman_5","LOP_ISTS_Infantry_GL","LOP_ISTS_Infantry_Corpsman","LOP_ISTS_Infantry_Marksman"};
+			classNames[] = {"LOP_AM_OPF_Infantry_TL","LOP_AM_OPF_Infantry_Rifleman","LOP_AM_OPF_Infantry_AT","LOP_AM_OPF_Infantry_AR","LOP_AM_OPF_Infantry_Rifleman_5","LOP_AM_OPF_Infantry_GL","LOP_AM_OPF_Infantry_Corpsman","LOP_AM_OPF_Infantry_Marksman"};
 		};
 		class Squad8_AT {
-			classNames[] = {"LOP_ISTS_Infantry_SL","LOP_ISTS_Infantry_Rifleman_3","LOP_ISTS_Infantry_AT","LOP_ISTS_Infantry_Rifleman_3","LOP_ISTS_Infantry_Rifleman_5","LOP_ISTS_Infantry_GL","LOP_ISTS_Infantry_Corpsman","LOP_ISTS_Infantry_Marksman"};
+			classNames[] = {"LOP_AM_OPF_Infantry_TL","LOP_AM_OPF_Infantry_Rifleman","LOP_AM_OPF_Infantry_AT","LOP_AM_OPF_Infantry_Rifleman","LOP_AM_OPF_Infantry_Rifleman_5","LOP_AM_OPF_Infantry_GL","LOP_AM_OPF_Infantry_Corpsman","LOP_AM_OPF_Infantry_Marksman"};
 		};
 		class Squad8_M {
-			classNames[] = {"LOP_ISTS_Infantry_SL","LOP_ISTS_Infantry_Rifleman_3","LOP_ISTS_Infantry_AT","LOP_ISTS_Infantry_Rifleman_3","LOP_ISTS_Infantry_Rifleman_5","LOP_ISTS_Infantry_GL","LOP_ISTS_Infantry_Corpsman","LOP_ISTS_Infantry_Marksman"};
+			classNames[] = {"LOP_AM_OPF_Infantry_TL","LOP_AM_OPF_Infantry_Rifleman","LOP_AM_OPF_Infantry_AT","LOP_AM_OPF_Infantry_Rifleman","LOP_AM_OPF_Infantry_Rifleman_5","LOP_AM_OPF_Infantry_GL","LOP_AM_OPF_Infantry_Corpsman","LOP_AM_OPF_Infantry_Marksman"};
 		};
 		class Squad8_INS {
-			classNames[] = {"LOP_ISTS_Infantry_SL","LOP_ISTS_Infantry_Rifleman_3","LOP_ISTS_Infantry_AT","LOP_ISTS_Infantry_AR","LOP_ISTS_Infantry_Rifleman_5","LOP_ISTS_Infantry_GL","LOP_ISTS_Infantry_Corpsman","LOP_ISTS_Infantry_Marksman"};
+			classNames[] = {"LOP_AM_OPF_Infantry_TL","LOP_AM_OPF_Infantry_Rifleman","LOP_AM_OPF_Infantry_AT","LOP_AM_OPF_Infantry_AR","LOP_AM_OPF_Infantry_Rifleman_5","LOP_AM_OPF_Infantry_GL","LOP_AM_OPF_Infantry_Corpsman","LOP_AM_OPF_Infantry_Marksman"};
 		};
 		class Squad4 {
-			classNames[] = {"LOP_ISTS_Infantry_SL","LOP_ISTS_Infantry_Marksman","LOP_ISTS_Infantry_AR","LOP_ISTS_Infantry_Corpsman"};
+			classNames[] = {"LOP_AM_OPF_Infantry_TL","LOP_AM_OPF_Infantry_Marksman","LOP_AM_OPF_Infantry_AR","LOP_AM_OPF_Infantry_Corpsman"};
 		};
 		class Squad4_AA {
-			classNames[] = {"LOP_ISTS_Infantry_SL","LOP_TKA_Infantry_AA","LOP_ISTS_Infantry_Rifleman_3","LOP_ISTS_Infantry_Corpsman"};
+			classNames[] = {"LOP_AM_OPF_Infantry_TL","LOP_TKA_Infantry_AA","LOP_AM_OPF_Infantry_Rifleman","LOP_AM_OPF_Infantry_Corpsman"};
 		};
 		class Squad4_AR {
-			classNames[] = {"LOP_ISTS_Infantry_SL","LOP_ISTS_Infantry_AR","LOP_ISTS_Infantry_Rifleman_3","LOP_ISTS_Infantry_Corpsman"};
+			classNames[] = {"LOP_AM_OPF_Infantry_TL","LOP_AM_OPF_Infantry_AR","LOP_AM_OPF_Infantry_Rifleman","LOP_AM_OPF_Infantry_Corpsman"};
 		};
 		class Squad4_AT {
-			classNames[] = {"LOP_ISTS_Infantry_SL","LOP_ISTS_Infantry_AT","LOP_ISTS_Infantry_Rifleman_3","LOP_ISTS_Infantry_Corpsman"};
+			classNames[] = {"LOP_AM_OPF_Infantry_TL","LOP_AM_OPF_Infantry_AT","LOP_AM_OPF_Infantry_Rifleman","LOP_AM_OPF_Infantry_Corpsman"};
 		};
 		class Squad4_M {
-			classNames[] = {"LOP_ISTS_Infantry_SL","LOP_ISTS_Infantry_Marksman","LOP_ISTS_Infantry_Rifleman_3","LOP_ISTS_Infantry_Corpsman"};
+			classNames[] = {"LOP_AM_OPF_Infantry_TL","LOP_AM_OPF_Infantry_Marksman","LOP_AM_OPF_Infantry_Rifleman","LOP_AM_OPF_Infantry_Corpsman"};
 		};
 		class Squad4_INS {
-			classNames[] = {"LOP_ISTS_Infantry_SL","LOP_ISTS_Infantry_Marksman","LOP_ISTS_Infantry_AR","LOP_ISTS_Infantry_Corpsman"};
+			classNames[] = {"LOP_AM_OPF_Infantry_TL","LOP_AM_OPF_Infantry_Marksman","LOP_AM_OPF_Infantry_AR","LOP_AM_OPF_Infantry_Corpsman"};
 		};
 		class Sniper {
-			classNames[] = {"LOP_TKA_Infantry_Marksman","LOP_TKA_Infantry_Rifleman_3"};
+			classNames[] = {"LOP_AM_OPF_Infantry_Marksman","LOP_AM_OPF_Infantry_Rifleman_9"};
 		};
 		class Sniper_INS {
 			classNames[] = {"LOP_AM_Infantry_Rifleman_7","LOP_AM_Infantry_Marksman"};
 		};
 		class ParaMilitary {
-			classNames[] = {"LOP_ISTS_Infantry_SL","LOP_ISTS_Infantry_Marksman","LOP_ISTS_Infantry_AR","LOP_ISTS_Infantry_Corpsman"};
+			classNames[] = {"LOP_AM_OPF_Infantry_TL","LOP_AM_OPF_Infantry_Marksman","LOP_AM_OPF_Infantry_AR","LOP_AM_OPF_Infantry_Corpsman"};
 		};
 		class SpecOps {
-			classNames[] = {"LOP_ISTS_Infantry_SL","LOP_ISTS_Infantry_Marksman","LOP_ISTS_Infantry_AR","LOP_ISTS_Infantry_Corpsman"};
+			classNames[] = {"LOP_AM_OPF_Infantry_TL","LOP_AM_OPF_Infantry_Marksman","LOP_AM_OPF_Infantry_AR","LOP_AM_OPF_Infantry_Corpsman"};
 		};
 		class SpecOps_Elite {
-			classNames[] = {"LOP_ISTS_Infantry_SL","LOP_ISTS_Infantry_Marksman","LOP_ISTS_Infantry_AR","LOP_ISTS_Infantry_Corpsman"};
+			classNames[] = {"LOP_AM_OPF_Infantry_TL","LOP_AM_OPF_Infantry_Marksman","LOP_AM_OPF_Infantry_AR","LOP_AM_OPF_Infantry_Corpsman"};
 		};
 	};
 	class Vehicles {
@@ -204,40 +204,40 @@ class Opfor_Altis {
 			classNames[] = {"LOP_TKA_UAZ_Open"};
 		};
 		class Car {
-			classNames[] = {"LOP_TKA_UAZ_Open","LOP_TKA_UAZ"};
+			classNames[] = {"LOP_AM_OPF_Offroad", "LOP_AM_OPF_UAZ_Open", "LOP_AM_OPF_Landrover"};
 		};
 		class Car_INS {
-			classNames[] = {"LOP_ISTS_Landrover"};
+			classNames[] = {"LOP_AM_OPF_Offroad"};
 		};
 		class CarTurret {
-			classNames[] = {"LOP_TKA_UAZ_SPG","LOP_TKA_UAZ_AGS","LOP_TKA_UAZ_DshKM"};
+			classNames[] = {"LOP_AM_OPF_UAZ_DshKM", "LOP_AM_OPF_Offroad_M2", "LOP_AM_OPF_Landrover_M2", "LOP_AM_OPF_Offroad_AT", "LOP_AM_OPF_Landrover_SPG9", "LOP_AM_OPF_UAZ_AGS", "LOP_AM_OPF_UAZ_SPG"};
 		};
 		class CarTurret_INS {
-			classNames[] = {"rhsgref_ins_g_uaz_dshkm_chdkz"};
+			classNames[] = {"LOP_AM_OPF_Nissan_PKM", "LOP_AM_OPF_Offroad_M2", "LOP_AM_OPF_Offroad_AT"};
 		};
 		class Truck {
-			classNames[] = {"LOP_TKA_Ural","LOP_TKA_Ural_open"};
+			classNames[] = {"rhsgref_ins_ural_work", "rhsgref_ins_zil131_flatbed_cover", "rhsgref_ins_zil131_flatbed"};
 		};
 		class Truck_INS {
-			classNames[] = {"LOP_ISTS_Truck"};
+			classNames[] = {"C_Van_01_transport_F"};
 		};
 		class Truck_Support {
-			classNames[] = {"LOP_TKA_Ural","I_G_Van_01_fuel_F","I_G_Van_02_transport_F"};
+			classNames[] = {"rhsgref_ins_gaz66_repair","rhsgref_ins_gaz66_ammo"};
 		};
 		class Armour_AA {
-			classNames[] = {"LOP_TKA_ZSU234"};
+			classNames[] = {"rhsgref_ins_ural_Zu23"};
 		};
 		class Armour_APC {
-			classNames[] = {"LOP_TKA_BTR60","LOP_TKA_BTR70"};
+			classNames[] = {"rhsgref_BRDM2_ins","LOP_AFR_OPF_M113_W", "LOP_TKA_BTR60", "LOP_TKA_BTR70", "LOP_TKA_BMP1", "LOP_TKA_BMP2"};
 		};
 		class Armour_MBT {
-			classNames[] = {"LOP_TKA_T55"};
+			classNames[] = {"LOP_TKA_T34", "LOP_TKA_T55"};
 		};
 		class Armour_Art {
 			classNames[] = {"LOP_TKA_BM21"};
 		};
 		class CAS_Heli {
-			classNames[] = {"LOP_TKA_Mi24V_AT","LOP_TKA_Mi24V_FAB"};
+			classNames[] = {"LOP_TKA_Mi24V_UPK23","LOP_TKA_Mi8MTV3_UPK23"};
 		};
 		class CAS_Air {
 			classNames[] = {"RHS_Su25SM_vvs"};

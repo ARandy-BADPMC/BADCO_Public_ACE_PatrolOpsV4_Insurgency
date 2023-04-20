@@ -50,16 +50,16 @@ class CfgMissionTasks {
 	//	#include "tasks\event_0_responseCrashedVehicle.hpp"			// Crashed Vehicle (INTEL) -- Team in distress
 	//	#include "tasks\event_0_responseCrashedHelo.hpp"			// Crashed Helicopter (INTEL) -- Team in distress
 	// 1 - Random Encounters
-		#include "tasks\encounter_EN_jets.hpp"
-		#include "tasks\encounter_EN_manpads.hpp"
-		#include "tasks\encounter_EN_manpats.hpp"
-		#include "tasks\encounter_INS_attack.hpp"
+//		#include "tasks\encounter_EN_jets.hpp"
+//		#include "tasks\encounter_EN_manpads.hpp"//
+//		#include "tasks\encounter_EN_manpats.hpp"
+//		#include "tasks\encounter_INS_attack.hpp"
 		#include "tasks\encounter_INS_camp.hpp"
-		#include "tasks\encounter_INS_fuelStop.hpp"
-		#include "tasks\encounter_INS_guard.hpp"
-		#include "tasks\encounter_INS_patrol.hpp"
-		#include "tasks\encounter_INS_patrolTechnical.hpp"
-		#include "tasks\encounter_INS_squadTruck.hpp"
+//		#include "tasks\encounter_INS_fuelStop.hpp"
+//		#include "tasks\encounter_INS_guard.hpp"
+//		#include "tasks\encounter_INS_patrol.hpp"
+//		#include "tasks\encounter_INS_patrolTechnical.hpp"
+//		#include "tasks\encounter_INS_squadTruck.hpp"
 
 	/* Operations */
 	// 2 - Eliminate Target
@@ -88,7 +88,7 @@ class CfgMissionTasks {
 		#include "tasks\op_3_secureFactory.hpp"					// 3/5 - Tested - TODO: Update Description, Failed Vehicle Spawn, Refine Spawn Locations // - Factories
 		#include "tasks\op_3_secureHomestead.hpp"					// 5/5 - Tested - TODO: Update Description // - Houses
 		#include "tasks\op_3_secureRuin.hpp"						// 2/5 - Tested - TODO: Update Description, Failed Vehicle Spawn, Remove Vehicles, Refine Spawn Locations // - Ruins
-		#include "tasks\op_3_secureTown.hpp"						// 5/5 - Tested - TODO: Update Description // - Town
+//		#include "tasks\op_3_secureTown.hpp"						// 5/5 - Tested - TODO: Update Description // - Town
 		#include "tasks\op_3_secureVillage.hpp"					// 5/5 - Tested - TODO: Update Description // - Village
 
 	// 4 - Retrieve Intel > Ambush
@@ -123,9 +123,9 @@ class CfgRespawnMP {
 		"rhsusf_M1230a1_usarmy_d"
 	};
 	class west {
-		respawn[] = {"Base","Group","Rallypoint","Countdown"}; // ,"Wave","Spectator","Trigger"
+		respawn[] = {"Base","Rallypoint","Countdown"}; // ,"Wave","Spectator","Trigger"
 		respawnTimer = 30;
-		redeploy[] = {"Base","Group","Rallypoint"};
+		redeploy[] = {"Base","Rallypoint"};
 		redeployVehicles[] = {"Base"};
 		redeployDelay = 10;
 	};
@@ -186,6 +186,7 @@ class CfgVirtualDepot {
 	// Force this classname to appear as a distinct vehicle, useful for splitting up models and classnames
 	forceInDepot[] = {
 
+	"RHS_MELB_AH6M",
 	"I_Heli_light_03_unarmed_F",
 	"O_Heli_Light_02_unarmed_F",
 	"RHS_MELB_MH6M",
@@ -201,16 +202,11 @@ class CfgVirtualDepot {
 	"RHS_UH60M2_d",
 	"RHS_UH60M_MEV_d",
 	
-	"B_APC_Wheeled_01_cannon_F",
-	"B_APC_Tracked_01_AA_F",
 	"rhsusf_CGRCAT1A2_usmc_d",
 	"rhsusf_CGRCAT1A2_Mk19_usmc_d",
 	"rhsusf_CGRCAT1A2_M2_usmc_d",
 	"I_MRAP_03_hmg_F",
 	"I_MRAP_03_gmg_F",
-	"B_MRAP_01_F",
-	"B_MRAP_01_gmg_F",
-	"B_MRAP_01_hmg_F",
 	"rhsusf_M1078A1R_SOV_M2_D_fmtv_socom",
 	"rhsusf_M1084A1R_SOV_M2_D_fmtv_socom",
 	"rhsusf_m113d_usarmy_supply",
@@ -242,12 +238,17 @@ class CfgVirtualDepot {
 	"rhsusf_M1239_M2_Deploy_socom_d",
 	"rhsusf_M1239_MK19_socom_d",
 	"rhsusf_M1239_MK19_Deploy_socom_d",
-	"RHS_M2A2",
-	"RHS_M2A2_BUSKI",
-	"RHS_M2A3",
-	"RHS_M2A3_BUSKI",
-	"RHS_M2A3_BUSKIII",
-	"RHS_M6",
+	"rhsusf_m1240a1_usarmy_d",
+	"rhsusf_m1240a1_m2_usarmy_d",
+	"rhsusf_m1240a1_m240_usarmy_d",
+	"rhsusf_m1240a1_mk19_usarmy_d",
+	"rhsusf_m1240a1_m2_uik_usarmy_d",
+	"rhsusf_m1240a1_m240_uik_usarmy_d",
+	"rhsusf_m1240a1_mk19_uik_usarmy_d",
+	"rhsusf_m1240a1_m2crows_usarmy_d",
+	"rhsusf_m1240a1_mk19crows_usarmy_d",
+	"rhsusf_m1245_m2crows_socom_d",
+	"rhsusf_m1245_mk19crows_socom_d",
 	"I_C_Offroad_02_LMG_F",
 	"I_C_Offroad_02_AT_F",
 	"B_APC_Tracked_01_rcws_F",
@@ -255,11 +256,6 @@ class CfgVirtualDepot {
 	"B_G_Offroad_01_AT_F",
 	"rhsusf_rg33_usmc_d",
 	"rhsusf_rg33_m2_usmc_d",
-	"B_AFV_Wheeled_01_up_cannon_F",
-	"B_AFV_Wheeled_01_cannon_F",
-	"I_LT_01_AT_F",
-	"I_LT_01_AA_F",
-	"I_LT_01_cannon_F",
 	"I_LT_01_scout_F"
 	};
 
